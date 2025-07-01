@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Chosen Palette: Calm Harmony -->
     <!-- Application Structure Plan: This single-page sales funnel is structured to progressively build user interest and trust, leading to a conversion. It starts with a compelling Hero section, followed by a Problem-Solution narrative (addressing user pain points and introducing the product as the remedy). Key benefits are highlighted, followed by a detailed Product Breakdown explaining the e-book and the interactive tool. A Social Proof section (testimonials) builds credibility. The page culminates with clear Pricing and a prominent Call to Action (CTA) for purchase, with a concise FAQ to address common objections. This linear flow is designed to guide the user from awareness to conversion. -->
     <!-- Visualization & Content Choices:
@@ -16,6 +18,8 @@
         - Product Breakdown: Goal: Inform/Differentiate. Method: Two distinct sub-sections for e-book and tool, each with text and benefit lists, now including specific image placeholders for the e-book cover and a tool screenshot. Interaction: Passive reading, but content encourages mental engagement. Justification: Clearly articulates the dual value proposition with visual support.
         - Benefits: Goal: Persuade/Motivate. Method: Bulleted list with impactful language. Interaction: Passive reading. Justification: Focuses on desired outcomes for the user.
         - Dreams Section: Goal: Emotional Connection/Aspiration. Method: Text introducing the concept, followed by a grid of dream scenarios, each with a relevant image and a short description. Interaction: Passive viewing, but designed to evoke strong emotional responses. Justification: Directly appeals to the user's deepest desires, showing the ultimate outcome of financial control.
+        - How It Works Section: Goal: Clarify Process/Reduce Friction. Method: A visual timeline or step-by-step breakdown of the 7-day journey, using Font Awesome icons for each day/phase. Interaction: Passive viewing. Justification: Makes the "7 Days" promise more concrete and achievable, reducing perceived complexity with clear, scalable icons.
+        - About Author Section: Goal: Build Trust/Authority. Method: A short bio with a professional photo of the author/team, highlighting relevant experience and passion. Interaction: Passive reading. Justification: Humanizes the product and builds credibility.
         - Testimonials: Goal: Build Trust. Method: Simple text blocks for quoted testimonials, now including avatar images for enhanced social proof. Interaction: Passive reading (future potential for carousel if multiple). Justification: Leverages social proof by making testimonials more tangible and relatable.
         - Pricing & CTA: Goal: Convert. Method: Clear pricing display and a prominent, styled button. Interaction: Click to external checkout link. Justification: Finalizes the offer and directs to purchase.
         - FAQ: Goal: Address Objections. Method: List of common questions and answers. Interaction: Passive reading. Justation: Proactively resolves potential buyer hesitations.
@@ -58,9 +62,8 @@
             object-fit: cover;
             border: 2px solid #10B981;
         }
-        /* Edição do Negrito via CSS: Garante que o negrito seja sempre bold */
         strong, b {
-            font-weight: bold;
+            font-weight: bold; /* Garante que o negrito seja sempre bold */
         }
         .dream-card {
             background-color: #F0FDF4; /* Emerald 50 light */
@@ -79,6 +82,27 @@
             object-fit: cover;
             border-radius: 0.5rem;
             margin-bottom: 1rem;
+        }
+        .how-it-works-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            background-color: #E0F2F7; /* Blue 50 light */
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #BFDBFE; /* Blue 100 */
+        }
+        .how-it-works-step i { /* Styling for Font Awesome icons */
+            font-size: 3rem; /* Adjust size as needed */
+            color: #059669; /* Emerald 600 */
+            margin-bottom: 0.5rem;
+            width: 80px; /* Match old image width */
+            height: 80px; /* Match old image height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -174,7 +198,7 @@
         </div>
     </section>
 
-    <!-- The Transformation You Deserve Section (New) -->
+    <!-- The Transformation You Deserve Section -->
     <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold text-emerald-600 mb-8">A Transformação que Você Merece em 7 Dias</h2>
@@ -206,7 +230,53 @@
         </div>
     </section>
 
-    <!-- Dreams Section (NEW) -->
+    <!-- How It Works Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-emerald-600 mb-8">Como Funciona o Método 7 Dias?</h2>
+            <p class="text-xl text-slate-700 mb-10">
+                Sua jornada para a liberdade financeira, passo a passo, em apenas uma semana!
+            </p>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-slate-700">
+                <div class="how-it-works-step">
+                    <i class="fas fa-search-dollar"></i> <!-- Ícone: Lupa sobre cifrão -->
+                    <h3 class="font-bold text-lg mb-2">Dia 1-2: Diagnóstico e Orçamento</h3>
+                    <p class="text-sm">Entenda para onde seu dinheiro vai e monte seu primeiro orçamento com a ferramenta.</p>
+                </div>
+                <div class="how-it-works-step">
+                    <i class="fas fa-hand-holding-dollar"></i> <!-- Ícone: Mão segurando cifrão (dívida) -->
+                    <h3 class="font-bold text-lg mb-2">Dia 3-4: Ataque às Dívidas</h3>
+                    <p class="text-sm">Identifique suas dívidas e crie um plano estratégico para quitá-las de vez.</p>
+                </div>
+                <div class="how-it-works-step">
+                    <i class="fas fa-piggy-bank"></i> <!-- Ícone: Cofrinho -->
+                    <h3 class="font-bold text-lg mb-2">Dia 5: Construa sua Reserva</h3>
+                    <p class="text-sm">Calcule e comece a formar sua reserva de emergência para ter segurança.</p>
+                </div>
+                <div class="how-it-works-step">
+                    <i class="fas fa-chart-line"></i> <!-- Ícone: Gráfico de linha subindo -->
+                    <h3 class="font-bold text-lg mb-2">Dia 6: Primeiros Investimentos</h3>
+                    <p class="text-sm">Descubra como seu dinheiro pode render e comece a investir com inteligência.</p>
+                </div>
+                 <div class="how-it-works-step">
+                    <i class="fas fa-bullseye"></i> <!-- Ícone: Alvo -->
+                    <h3 class="font-bold text-lg mb-2">Dia 7: Defina Suas Metas</h3>
+                    <p class="text-sm">Transforme seus sonhos em metas financeiras claras e alcançáveis.</p>
+                </div>
+                <div class="how-it-works-step">
+                    <i class="fas fa-sync-alt"></i> <!-- Ícone: Símbolo de sincronização/revisão -->
+                    <h3 class="font-bold text-lg mb-2">Sempre: Revisão e Aceleração</h3>
+                    <p class="text-sm">Dicas extras para manter o controle e acelerar sua jornada continuamente.</p>
+                </div>
+            </div>
+            <p class="text-center text-xl text-slate-700 mt-10">
+                Cada passo é guiado pelo e-book e facilitado pela ferramenta interativa, tornando o processo simples e eficaz!
+            </p>
+        </div>
+    </section>
+
+    <!-- Dreams Section -->
     <section class="py-16 bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold text-emerald-600 mb-8">Seus Sonhos Estão Mais Próximos do Que Você Imagina!</h2>
@@ -314,7 +384,7 @@
         </div>
     </section>
 
-    <!-- Why Choose This Product Section (New) -->
+    <!-- Why Choose This Product Section -->
     <section class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold text-emerald-600 mb-8">Por Que Escolher "Liberdade Financeira em 7 Dias"?</h2>
@@ -336,6 +406,30 @@
                     <span><strong>Acesso Flexível:</strong> E-book em PDF e ferramenta acessível direto do navegador (celular, tablet ou PC), com seus dados salvos!</span>
                 </li>
             </ul>
+        </div>
+    </section>
+
+    <!-- About Author Section (NEW) -->
+    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+        <div class="container mx-auto text-center md:flex md:items-center md:text-left">
+            <div class="md:w-1/3 flex justify-center mb-6 md:mb-0 md:mr-8">
+                <img src="https://nekibr.github.io/pagina_vendas/images/autor-perfil.jpg" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/150x150/ADD8E6/00008B?text=Seu+Avatar'"
+                     alt="Foto do Autor/Criador do Método" 
+                     class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-emerald-200">
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl font-bold text-emerald-600 mb-4">Quem Está Por Trás Deste Método?</h2>
+                <p class="text-lg text-slate-700 mb-4">
+                    Olá! Meu nome é <strong>[Seu Nome/Nome da Equipe]</strong> e minha paixão é ajudar pessoas a transformarem sua relação com o dinheiro. Assim como você, já enfrentei desafios financeiros e sei o quanto é libertador ter controle sobre as finanças.
+                </p>
+                <p class="text-lg text-slate-700 mb-4">
+                    Com anos de estudo e experiência prática em [mencione brevemente sua área de expertise, ex: educação financeira, investimentos, organização de negócios], desenvolvi o <strong>"Método 7 Dias para a Liberdade Financeira"</strong> para simplificar o que parece complexo e te dar as ferramentas exatas para você começar a ver resultados reais em apenas uma semana.
+                </p>
+                <p class="text-lg text-slate-700">
+                    Minha missão é te guiar nessa jornada, provando que a liberdade financeira está ao seu alcance.
+                </p>
+            </div>
         </div>
     </section>
 
