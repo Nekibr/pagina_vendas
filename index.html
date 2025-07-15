@@ -15,12 +15,12 @@
     <!-- Visualization & Content Choices:
         - Hero Section: Goal: Capture Attention. Method: Bold headline, benefit-driven subheadline, strong CTA button, and a prominent product visual (e-book cover + tool screenshot composite). Justification: Immediate impact and clear value proposition, now emphasizing the tool's central role.
         - Problem-Solution: Goal: Connect/Educate. Method: Text blocks with clear headings and bullet points. Justification: Builds empathy and positions the tool as the definitive remedy.
-        - Tool Features (Detailed Breakdown): Goal: Inform/Differentiate/Persuade. Method: Extensive bulleted lists for each major tool functionality (360° Vision, Budget, Debts, Goals, Simulators, Net Worth, Cash Flow, Subscriptions, Summary). Each feature is described with its benefit. Image placeholders for relevant tool screenshots. Justification: Clearly articulates the unique and advanced capabilities of the interactive tool, justifying its value.
+        - Tool Features (Detailed Breakdown): Goal: Inform/Differentiate/Persuade. Method: Concise, benefit-driven description of the tool's core functionalities, emphasizing problems solved and transformation. Image placeholders for relevant tool screenshots. Justification: Clearly articulates the unique and advanced capabilities of the interactive tool, justifying its value with a stronger focus on user benefits and a transformational tone.
         - Dreams Section: Goal: Emotional Connection/Aspiration. Method: Text and a grid of dream scenarios with images. Justification: Directly appeals to the user's deepest desires, showing the ultimate outcome of financial control.
         - How It Works Section: Goal: Clarify Process/Reduce Friction. Method: Visual step-by-step breakdown using Font Awesome icons. Justification: Makes the "7 Days" promise more concrete and achievable.
         - About Author Section: Goal: Build Trust/Authority. Method: Bio with professional photo. Justification: Humanizes the product and builds credibility.
         - Testimonials: Goal: Build Trust. Method: Quoted testimonials with avatars. Justification: Leverages social proof.
-        - Pricing & CTA: Goal: Convert. Method: Clear pricing, prominent button, payment/security badges. Justification: Finalizes the offer, reinforcing trust.
+        - Pricing & CTA: Goal: Convert. Method: Clear pricing, prominent button, payment/security badges. Justification: Finalizes the offer and directs to purchase, reinforcing trust.
         - FAQ: Goal: Address Objections. Method: List of common questions and answers. Justification: Proactively resolves potential buyer hesitations.
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
@@ -103,16 +103,7 @@
             align-items: center;
             justify-content: center;
         }
-        .payment-badges img {
-            height: 30px; /* Adjust size as needed */
-            margin: 0 5px;
-            display: inline-block;
-        }
-        .security-badges img {
-            height: 40px; /* Adjust size as needed */
-            margin: 0 10px;
-            display: inline-block;
-        }
+        /* Removido: .payment-badges img e .security-badges img */
     </style>
 </head>
 <body class="bg-stone-50 text-slate-800 leading-relaxed">
@@ -265,64 +256,16 @@
                     </div>
 
                     <ul class="list-disc list-inside space-y-4 text-slate-700">
-                        <li><strong>Visão Financeira 360° Instantânea (Painel Superior Dinâmico):</strong>
-                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
-                                <li><strong>Economizado em Destaque:</strong> Veja imediatamente o total acumulado para suas metas, um lembrete constante do seu progresso.</li>
-                                <li><strong>Controle de Assinaturas:</strong> Saiba exatamente quanto você gasta mensalmente com serviços recorrentes, identificando oportunidades de economia.</li>
-                                <li><strong>Receitas e Despesas Claras:</strong> Um resumo visual em verde (receitas) e vermelho (despesas) mostra seu fluxo de caixa mensal, permitindo um acompanhamento rápido e eficaz.</li>
-                                <li><strong>Detalhes Expansíveis:</strong> Com um clique, explore a lista completa de metas, assinaturas, receitas e despesas, mergulhando nos detalhes sem sair do painel principal.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Orçamento Descomplicado (Módulo 3 do E-book):</strong>
-                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
-                                <li><strong>Categorização Inteligente:</strong> Classifique suas despesas em categorias essenciais para um raio-x financeiro preciso.</li>
-                                <li><strong>Regra 50/30/20 Visual:</strong> Compare seus gastos com a famosa regra de ouro do orçamento, com barras de progresso que te mostram onde ajustar para alcançar o equilíbrio.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Plano de Dívidas Estratégico (Módulo 4 do E-book):</strong>
-                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
-                                <li><strong>Priorização Automática:</strong> Escolha entre "Bola de Neve" ou "Avalancha" e a ferramenta organiza suas dívidas para você.</li>
-                                <li><strong>Simulador de Quitação Rápida:</strong> Descubra em quanto tempo você pode se livrar da sua dívida prioritária adicionando um pagamento extra mensal. A motivação que você precisa para acelerar!</li>
-                            </ul>
-                        </li>
-                        <li><strong>Metas Realistas e Motivadoras (Módulo 5 do E-book):</strong>
-                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
-                                <li><strong>Calculadora de Reserva de Emergência:</strong> Defina sua meta ideal de reserva com base nos seus custos essenciais.</li>
-                                <li><strong>Metas SMART com Progresso Visual:</strong> Crie metas específicas e acompanhe seu progresso com barras intuitivas que te impulsionam a economizar.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Simuladores Poderosos para o Futuro (Módulo 5 do E-book):</strong>
-                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
-                                <li><strong>Simulador de Investimentos:</strong> Veja o poder dos juros compostos! Projete o crescimento do seu dinheiro com base em capital inicial, aportes mensais e taxa de juros.</li>
-                                <li><strong>Simulador de Financiamento:</strong> Entenda o custo real de um financiamento (imóvel, veículo, etc.), calculando parcelas mensais e o custo total com juros, para tomar decisões conscientes.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Patrimônio em Crescimento (Módulo 6 do E-book):</strong>
-                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
-                                <li><strong>Visão Completa de Riqueza:</strong> Registre seus ativos (investimentos, bens) e passivos (dívidas) para calcular seu patrimônio líquido.</li>
-                                <li><strong>Gráfico de Evolução:</strong> Acompanhe o crescimento do seu patrimônio ao longo do tempo com um gráfico claro e motivador, a verdadeira medida da sua liberdade financeira.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Previsão de Fluxo de Caixa Futuro (Módulo 7 do E-book):</strong>
-                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
-                                <li><strong>Calendário Anual Interativo:</strong> Visualize seu saldo, receitas e despesas mês a mês em um formato de calendário intuitivo.</li>
-                                <li><strong>Eventos Futuros:</strong> Adicione receitas e despesas pontuais (bônus, férias, IPVA) para ter uma projeção ainda mais precisa e evitar surpresas.</li>
-                                <li><strong>Gráfico de Tendências:</strong> Um gráfico de linha mostra a evolução do seu fluxo de caixa, ajudando a identificar períodos de folga ou aperto.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Gerenciador de Assinaturas (Módulo 8 do E-book):</strong>
-                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
-                                <li><strong>Controle Total:</strong> Liste todos os seus serviços recorrentes, valores e datas de renovação.</li>
-                                <li><strong>Oportunidades de Economia:</strong> Identifique rapidamente assinaturas esquecidas ou desnecessárias para otimizar seus gastos.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Resumo Geral Consolidado (Módulo 9 do E-book):</strong>
-                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
-                                <li><strong>Panorama Completo:</strong> Uma seção final que reúne os principais dados de todos os passos, oferecendo uma visão holística e consolidada da sua saúde financeira.</li>
-                            </ul>
-                        </li>
+                        <li><strong>Visão Financeira 360° Instantânea:</strong> Chega de surpresas! Tenha um panorama completo das suas finanças, com receitas e despesas claras, e veja seu progresso em tempo real.</li>
+                        <li><strong>Orçamento Descomplicado:</strong> Crie um orçamento que funciona para VOCÊ, compare com a regra 50/30/20 e saiba exatamente onde ajustar para ter equilíbrio.</li>
+                        <li><strong>Plano de Dívidas Estratégico com Simulador:</strong> Transforme o pesadelo das dívidas em um plano de ação claro. Escolha a melhor estratégia (Bola de Neve ou Avalancha) e simule em quanto tempo você se liberta adicionando um valor extra. Veja a luz no fim do túnel!</li>
+                        <li><strong>Metas e Sonhos com Progresso Visual:</strong> Calcule sua reserva de emergência e crie metas realistas. Acompanhe seu progresso com barras visuais que te impulsionam a economizar para seus sonhos (viagem, carro, casa!).</li>
+                        <li><strong>Simuladores Poderosos para o Futuro:</strong> Projete o crescimento do seu dinheiro com o simulador de investimentos (juros compostos a seu favor!) e entenda o custo real de financiamentos para decisões conscientes.</li>
+                        <li><strong>Patrimônio e Fluxo de Caixa em Crescimento:</strong> Monitore sua riqueza e tenha uma previsão clara do seu dinheiro mês a mês com um calendário interativo. Evite surpresas e planeje com antecedência.</li>
+                        <li><strong>Previsão de Fluxo de Caixa Futuro:</strong> Visualize seu saldo, receitas e despesas mês a mês em um calendário intuitivo, adicione eventos futuros e veja a evolução do seu fluxo de caixa com gráficos de tendências.</li>
+                        <li><strong>Resumo Geral Consolidado:</strong> Uma seção final que reúne os principais dados de todos os passos, oferecendo uma visão holística e consolidada da sua saúde financeira.</li>
                     </ul>
-                    <p class="text-slate-700 mt-4">Com essa ferramenta, você não apenas aprende, mas **age e visualiza a sua transformação** em tempo real!</p>
+                    <p class="text-slate-700 mt-4">Com a **"Finanças em Ação"**, você não apenas aprende, mas **age, visualiza e acelera a sua transformação financeira** rumo à liberdade!</p>
                 </div>
                 <!-- E-book (Still present, but positioned as essential guide) -->
                 <div class="bg-blue-50 p-6 rounded-2xl shadow-sm border border-blue-100">
@@ -333,7 +276,7 @@
                              alt="Capa do E-book Planejamento Financeiro em 7 Dias" 
                              class="rounded-lg shadow-md w-48 md:w-full max-w-xs h-auto object-cover">
                     </div>
-                    <p class="text-slate-700 mb-4">Este e-book é o seu mapa detalhado. Ele te guia com 7 módulos práticos, sem jargões, para você dominar os conceitos e aplicar cada passo do método:</p>
+                    <p class="text-slate-700 mb-4">Este e-book é o seu mapa detalhado. Ele te guia com 8 módulos práticos, sem jargões, para você dominar os conceitos e aplicar cada passo do método:</p>
                     <ul class="list-disc list-inside space-y-2 text-slate-700">
                         <li><strong>Módulo 1: Desmistificando as Finanças:</strong> O Início da Jornada.</li>
                         <li><strong>Módulo 2: Onde Seu Dinheiro Vai?:</strong> Rastreando o Fluxo de Caixa.</li>
@@ -342,6 +285,7 @@
                         <li><strong>Módulo 5: Investimentos:</strong> Colocando Seu Dinheiro para Trabalhar para Você.</li>
                         <li><strong>Módulo 6: Proteção e Planejamento para o Futuro:</strong> Além do Agora.</li>
                         <li><strong>Módulo 7: Seu Plano de Ação:</strong> Consistência e Próximos Passos.</li>
+                        <li><strong>Módulo 8: Dominando Sua Ferramenta Interativa:</strong> "Finanças em Ação".</li>
                     </ul>
                     <p class="text-slate-700 mt-4">Conteúdo direto ao ponto, para você aprender de forma simples e eficaz e usar a ferramenta ao máximo.</p>
                 </div>
@@ -349,7 +293,51 @@
         </div>
     </section>
 
-    <!-- How It Works Section (Removed as per request for focus on problem/solution) -->
+    <!-- How It Works Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-emerald-600 mb-8">Como Funciona O Mapa da Liberdade?</h2>
+            <p class="text-xl text-slate-700 mb-10">
+                Sua jornada para a paz financeira, passo a passo, de forma clara e eficiente!
+            </p>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-slate-700">
+                <div class="how-it-works-step">
+                    <i class="fas fa-search-dollar"></i> <!--  -->
+                    <h3 class="font-bold text-lg mb-2">Passo 1: Diagnóstico e Orçamento</h3>
+                    <p class="text-sm">Entenda para onde seu dinheiro vai e monte seu primeiro orçamento com a ferramenta.</p>
+                </div>
+                <div class="how-it-works-step">
+                    <i class="fas fa-hand-holding-dollar"></i> <!--  -->
+                    <h3 class="font-bold text-lg mb-2">Passo 2: Ataque às Dívidas</h3>
+                    <p class="text-sm">Identifique suas dívidas e crie um plano estratégico para quitá-las de vez.</p>
+                </div>
+                <div class="how-it-works-step">
+                    <i class="fas fa-piggy-bank"></i> <!--  -->
+                    <h3 class="font-bold text-lg mb-2">Passo 3: Construa sua Reserva</h3>
+                    <p class="text-sm">Calcule e comece a formar sua reserva de emergência para ter segurança.</p>
+                </div>
+                <div class="how-it-works-step">
+                    <i class="fas fa-chart-line"></i> <!--  -->
+                    <h3 class="font-bold text-lg mb-2">Passo 4: Primeiros Investimentos</h3>
+                    <p class="text-sm">Descubra como seu dinheiro pode render e comece a investir com inteligência.</p>
+                </div>
+                 <div class="how-it-works-step">
+                    <i class="fas fa-bullseye"></i> <!--  -->
+                    <h3 class="font-bold text-lg mb-2">Passo 5: Defina Suas Metas</h3>
+                    <p class="text-sm">Transforme seus sonhos em metas financeiras claras e alcançáveis.</p>
+                </div>
+                <div class="how-it-works-step">
+                    <i class="fas fa-sync-alt"></i> <!--  -->
+                    <h3 class="font-bold text-lg mb-2">Passo 6: Revisão e Aceleração</h3>
+                    <p class="text-sm">Dicas extras para manter o controle e acelerar sua jornada continuamente.</p>
+                </div>
+            </div>
+            <p class="text-center text-xl text-slate-700 mt-10">
+                Cada passo é guiado pelo e-book e facilitado pela ferramenta interativa, tornando o processo simples e eficaz!
+            </p>
+        </div>
+    </section>
 
     <!-- Dreams Section -->
     <section class="py-16 bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
@@ -516,7 +504,7 @@
     </section>
 
     <!-- Pricing and Final CTA -->
-    <section id="comprar" class="py-16 bg-gradient-to-br from-emerald-100 to-blue-100 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <section id="comprar" class="py-16 bg-gradient-to-br from-emerald-100 to-blue-100 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6 text-center">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-emerald-800 mb-6">Comece sua Jornada para a Paz Financeira Agora!</h2>
             <p class="text-xl text-slate-700 mb-4">
@@ -537,27 +525,10 @@
             </a>
 
             <div class="mt-8 flex flex-wrap justify-center items-center gap-4">
-                <div class="payment-badges flex justify-center items-center">
-                    <img src="https://nekibr.github.io/pagina_vendas/images/bandeiras-cartao.png" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/150x30/FFFFFF/000000?text=Bandeiras'"
-                         alt="Bandeiras de Cartão (Visa, MasterCard, Elo)">
-                    <img src="https://nekibr.github.io/pagina_vendas/images/logo-pix.png" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/50x30/FFFFFF/000000?text=Pix'"
-                         alt="Logo Pix">
-                    <img src="https://nekibr.github.io/pagina_vendas/images/logo-boleto.png" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/50x30/FFFFFF/000000?text=Boleto'"
-                         alt="Logo Boleto">
-                </div>
-                <div class="security-badges flex justify-center items-center">
-                    <img src="https://nekibr.github.io/pagina_vendas/images/selo-seguranca.png" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/100x40/FFFFFF/000000?text=Seguro'"
-                         alt="Selo de Compra Segura">
-                    <img src="https://nekibr.github.io/pagina_vendas/images/selo-garantia.png" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/100x40/FFFFFF/000000?text=Garantia'"
-                         alt="Selo de Garantia de 7 Dias">
-                </div>
+            
+               
             </div>
-            <p class="mt-4 text-sm text-slate-600">Pagamento seguro via [Nome da Plataforma de Pagamento].</p>
+            <p class="mt-4 text-sm text-slate-600">Pagamento seguro via Hotmart.</p>
              <p class="text-sm text-slate-600 mt-2">
                 <strong>GARANTIA INCONDICIONAL DE 7 DIAS:</strong> Sua satisfação ou seu dinheiro de volta!
             </p>
