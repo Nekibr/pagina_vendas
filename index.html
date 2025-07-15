@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liberdade Financeira em 7 Dias: E-book + Ferramenta</title>
+    <title>O Mapa da Liberdade: A Ferramenta Interativa que Transforma Suas Finanças</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,18 +11,17 @@
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Chosen Palette: Calm Harmony -->
-    <!-- Application Structure Plan: This single-page sales funnel is structured to progressively build user interest and trust, leading to a conversion. It starts with a compelling Hero section, followed by a Problem-Solution narrative (addressing user pain points and introducing the product as the remedy). Key benefits are highlighted, followed by a detailed Product Breakdown explaining the e-book and the interactive tool. A Social Proof section (testimonials) builds credibility. The page culminates with clear Pricing and a prominent Call to Action (CTA) for purchase, with a concise FAQ to address common objections. This linear flow is designed to guide the user from awareness to conversion. -->
+    <!-- Application Structure Plan: This single-page sales funnel is now heavily optimized around the interactive tool as the core value proposition, complemented by the e-book. The structure emphasizes problem-solving, detailed feature benefits, and emotional connection. It flows from a strong hero, through problem identification, a comprehensive breakdown of the tool's advanced features, emotional drivers (dreams), credibility builders (how it works, author, testimonials), and culminates in a clear, trust-reinforced CTA. The VSL section has been removed to streamline the focus on textual and image-based persuasion. -->
     <!-- Visualization & Content Choices:
-        - Hero Section: Goal: Capture Attention. Method: Bold headline, benefit-driven subheadline, strong CTA button, and a placeholder for a product visual (e.g., e-book cover + tool screenshot composite). Interaction: Direct link on CTA. Justification: Immediate impact and clear value proposition.
-        - Problem-Solution: Goal: Connect/Educate. Method: Text blocks with clear headings and bullet points. Interaction: Passive reading. Justification: Builds empathy and positions the product as the definitive solution.
-        - Product Breakdown: Goal: Inform/Differentiate. Method: Two distinct sub-sections for e-book and tool, each with text and benefit lists, now including specific image placeholders for the e-book cover and a tool screenshot. Interaction: Passive reading, but content encourages mental engagement. Justification: Clearly articulates the dual value proposition with visual support.
-        - Benefits: Goal: Persuade/Motivate. Method: Bulleted list with impactful language. Interaction: Passive reading. Justification: Focuses on desired outcomes for the user.
-        - Dreams Section: Goal: Emotional Connection/Aspiration. Method: Text introducing the concept, followed by a grid of dream scenarios, each with a relevant image and a short description. Interaction: Passive viewing, but designed to evoke strong emotional responses. Justification: Directly appeals to the user's deepest desires, showing the ultimate outcome of financial control.
-        - How It Works Section: Goal: Clarify Process/Reduce Friction. Method: A visual timeline or step-by-step breakdown of the 7-day journey, using Font Awesome icons for each day/phase. Interaction: Passive viewing. Justification: Makes the "7 Days" promise more concrete and achievable, reducing perceived complexity with clear, scalable icons.
-        - About Author Section: Goal: Build Trust/Authority. Method: A short bio with a professional photo of the author/team, highlighting relevant experience and passion. Interaction: Passive reading. Justification: Humanizes the product and builds credibility.
-        - Testimonials: Goal: Build Trust. Method: Simple text blocks for quoted testimonials, now including avatar images for enhanced social proof. Interaction: Passive reading (future potential for carousel if multiple). Justification: Leverages social proof by making testimonials more tangible and relatable.
-        - Pricing & CTA: Goal: Convert. Method: Clear pricing display and a prominent, styled button. Interaction: Click to external checkout link. Justification: Finalizes the offer and directs to purchase.
-        - FAQ: Goal: Address Objections. Method: List of common questions and answers. Interaction: Passive reading. Justation: Proactively resolves potential buyer hesitations.
+        - Hero Section: Goal: Capture Attention. Method: Bold headline, benefit-driven subheadline, strong CTA button, and a prominent product visual (e-book cover + tool screenshot composite). Justification: Immediate impact and clear value proposition, now emphasizing the tool's central role.
+        - Problem-Solution: Goal: Connect/Educate. Method: Text blocks with clear headings and bullet points. Justification: Builds empathy and positions the tool as the definitive remedy.
+        - Tool Features (Detailed Breakdown): Goal: Inform/Differentiate/Persuade. Method: Extensive bulleted lists for each major tool functionality (360° Vision, Budget, Debts, Goals, Simulators, Net Worth, Cash Flow, Subscriptions, Summary). Each feature is described with its benefit. Image placeholders for relevant tool screenshots. Justification: Clearly articulates the unique and advanced capabilities of the interactive tool, justifying its value.
+        - Dreams Section: Goal: Emotional Connection/Aspiration. Method: Text and a grid of dream scenarios with images. Justification: Directly appeals to the user's deepest desires, showing the ultimate outcome of financial control.
+        - How It Works Section: Goal: Clarify Process/Reduce Friction. Method: Visual step-by-step breakdown using Font Awesome icons. Justification: Makes the "7 Days" promise more concrete and achievable.
+        - About Author Section: Goal: Build Trust/Authority. Method: Bio with professional photo. Justification: Humanizes the product and builds credibility.
+        - Testimonials: Goal: Build Trust. Method: Quoted testimonials with avatars. Justification: Leverages social proof.
+        - Pricing & CTA: Goal: Convert. Method: Clear pricing, prominent button, payment/security badges. Justification: Finalizes the offer, reinforcing trust.
+        - FAQ: Goal: Address Objections. Method: List of common questions and answers. Justification: Proactively resolves potential buyer hesitations.
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
@@ -104,6 +103,16 @@
             align-items: center;
             justify-content: center;
         }
+        .payment-badges img {
+            height: 30px; /* Adjust size as needed */
+            margin: 0 5px;
+            display: inline-block;
+        }
+        .security-badges img {
+            height: 40px; /* Adjust size as needed */
+            margin: 0 10px;
+            display: inline-block;
+        }
     </style>
 </head>
 <body class="bg-stone-50 text-slate-800 leading-relaxed">
@@ -112,19 +121,19 @@
     <header class="bg-gradient-to-br from-emerald-50 to-blue-50 py-16 md:py-24 text-center rounded-b-3xl shadow-md">
         <div class="container mx-auto px-4 max-w-3xl">
             <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-gradient">
-                Liberdade Financeira em 7 Dias
+                O Mapa da Liberdade
             </h1>
             <p class="text-xl md:text-2xl text-slate-700 mb-8 max-w-2xl mx-auto">
-                Seu guia completo e ferramenta interativa para organizar suas finanças, sair das dívidas e começar a investir.
+                O guia completo (E-book) e a plataforma definitiva para organizar, planejar e visualizar seu progresso financeiro de forma clara e motivadora.
             </p>
             <a href="#comprar" class="btn-primary">
-                Quero Minha Liberdade Financeira Agora!
+                Quero Meu Mapa da Liberdade Agora!
             </a>
             <div class="mt-12 flex justify-center">
-                <!-- Imagem do Produto (Capa do Ebook + Screenshot da Ferramenta) -->
+                <!--  -->
                 <img src="https://nekibr.github.io/pagina_vendas/images/capa-e-ferramenta.jpg" 
                      onerror="this.onerror=null; this.src='https://placehold.co/600x400/D1FAE5/065F46?text=Capa+Ebook+%2B+Ferramenta'"
-                     alt="Capa do E-book Liberdade Financeira em 7 Dias e Imagem da Ferramenta Interativa" 
+                     alt="Capa do O Mapa da Liberdade e Ferramenta Interativa" 
                      class="rounded-xl shadow-lg w-full max-w-lg h-auto md:h-64 object-cover">
             </div>
         </div>
@@ -134,6 +143,9 @@
     <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center text-emerald-600 mb-8">Você se identifica com algum destes desafios?</h2>
+            <p class="text-xl text-slate-700 mb-8 text-center">
+                A verdade é que a maioria das pessoas se sente assim. Mas não precisa ser a sua realidade!
+            </p>
             <div class="grid md:grid-cols-2 gap-8 text-lg text-slate-700">
                 <div class="flex items-start gap-3 bg-red-50 p-4 rounded-xl shadow-sm">
                     <span class="text-red-500 text-2xl">❌</span>
@@ -171,7 +183,7 @@
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold text-emerald-600 mb-8">Chega de preocupação, comece a transformar!</h2>
             <p class="text-xl text-slate-700 mb-6">
-                Com o <strong>Liberdade Financeira em 7 Dias</strong>, você terá o mapa completo e a ferramenta prática para:
+                Com o <strong>O Mapa da Liberdade</strong>, você terá a bússola e o mapa para:
             </p>
             <ul class="list-none space-y-4 text-lg text-slate-700 font-medium">
                 <li class="flex items-center justify-center gap-3">
@@ -201,7 +213,7 @@
     <!-- The Transformation You Deserve Section -->
     <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-emerald-600 mb-8">A Transformação que Você Merece em 7 Dias</h2>
+            <h2 class="text-3xl font-bold text-emerald-600 mb-8">A Transformação que Você Merece: Paz e Controle</h2>
             <div class="grid md:grid-cols-2 gap-8 text-lg text-slate-700">
                 <div>
                     <h3 class="text-2xl font-bold text-emerald-700 mb-4">Antes da Transformação:</h3>
@@ -230,58 +242,121 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-emerald-600 mb-8">Como Funciona o Método 7 Dias?</h2>
-            <p class="text-xl text-slate-700 mb-10">
-                Sua jornada para a liberdade financeira, passo a passo, em apenas uma semana!
+    <!-- Product Breakdown Section - Updated to focus on the tool -->
+    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-emerald-600 mb-12">Conheça a Ferramenta Interativa: Seu Assistente Financeiro Completo!</h2>
+
+            <p class="text-xl text-slate-700 mb-8 text-center">
+                Desenvolvemos uma plataforma intuitiva e poderosa, projetada para transformar a teoria do seu e-book em ação prática. Com um design moderno e focado na experiência do usuário, nossa ferramenta é o seu assistente pessoal para organizar, planejar e visualizar seu progresso financeiro de forma clara e motivadora.
             </p>
 
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-slate-700">
-                <div class="how-it-works-step">
-                    <i class="fas fa-search-dollar"></i> <!-- Ícone: Lupa sobre cifrão -->
-                    <h3 class="font-bold text-lg mb-2">Dia 1-2: Diagnóstico e Orçamento</h3>
-                    <p class="text-sm">Entenda para onde seu dinheiro vai e monte seu primeiro orçamento com a ferramenta.</p>
+            <div class="grid md:grid-cols-1 gap-10 items-start">
+                <!-- Ferramenta Interativa - Detalhamento Completo -->
+                <div class="bg-emerald-50 p-6 rounded-2xl shadow-sm border border-emerald-100">
+                    <h3 class="text-2xl font-bold text-emerald-700 mb-4 text-center">✨ A Ferramenta "Finanças em Ação": O Poder nas Suas Mãos!</h3>
+                    <p class="text-slate-700 mb-4">Sua plataforma completa, acessível direto do navegador (smartphone ou computador), com funcionalidades exclusivas para você ver a transformação acontecer:</p>
+                    
+                    <div class="flex justify-center mb-6">
+                        <img src="https://nekibr.github.io/pagina_vendas/images/screenshot-ferramenta.jpg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/400x300/C8E6C9/1B5E20?text=Screenshot+Ferramenta'"
+                             alt="Screenshot da Ferramenta Interativa Finanças em Ação" 
+                             class="rounded-lg shadow-md w-full max-w-md h-auto object-cover">
+                    </div>
+
+                    <ul class="list-disc list-inside space-y-4 text-slate-700">
+                        <li><strong>Visão Financeira 360° Instantânea (Painel Superior Dinâmico):</strong>
+                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
+                                <li><strong>Economizado em Destaque:</strong> Veja imediatamente o total acumulado para suas metas, um lembrete constante do seu progresso.</li>
+                                <li><strong>Controle de Assinaturas:</strong> Saiba exatamente quanto você gasta mensalmente com serviços recorrentes, identificando oportunidades de economia.</li>
+                                <li><strong>Receitas e Despesas Claras:</strong> Um resumo visual em verde (receitas) e vermelho (despesas) mostra seu fluxo de caixa mensal, permitindo um acompanhamento rápido e eficaz.</li>
+                                <li><strong>Detalhes Expansíveis:</strong> Com um clique, explore a lista completa de metas, assinaturas, receitas e despesas, mergulhando nos detalhes sem sair do painel principal.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Orçamento Descomplicado (Módulo 3 do E-book):</strong>
+                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
+                                <li><strong>Categorização Inteligente:</strong> Classifique suas despesas em categorias essenciais para um raio-x financeiro preciso.</li>
+                                <li><strong>Regra 50/30/20 Visual:</strong> Compare seus gastos com a famosa regra de ouro do orçamento, com barras de progresso que te mostram onde ajustar para alcançar o equilíbrio.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Plano de Dívidas Estratégico (Módulo 4 do E-book):</strong>
+                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
+                                <li><strong>Priorização Automática:</strong> Escolha entre "Bola de Neve" ou "Avalancha" e a ferramenta organiza suas dívidas para você.</li>
+                                <li><strong>Simulador de Quitação Rápida:</strong> Descubra em quanto tempo você pode se livrar da sua dívida prioritária adicionando um pagamento extra mensal. A motivação que você precisa para acelerar!</li>
+                            </ul>
+                        </li>
+                        <li><strong>Metas Realistas e Motivadoras (Módulo 5 do E-book):</strong>
+                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
+                                <li><strong>Calculadora de Reserva de Emergência:</strong> Defina sua meta ideal de reserva com base nos seus custos essenciais.</li>
+                                <li><strong>Metas SMART com Progresso Visual:</strong> Crie metas específicas e acompanhe seu progresso com barras intuitivas que te impulsionam a economizar.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Simuladores Poderosos para o Futuro (Módulo 5 do E-book):</strong>
+                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
+                                <li><strong>Simulador de Investimentos:</strong> Veja o poder dos juros compostos! Projete o crescimento do seu dinheiro com base em capital inicial, aportes mensais e taxa de juros.</li>
+                                <li><strong>Simulador de Financiamento:</strong> Entenda o custo real de um financiamento (imóvel, veículo, etc.), calculando parcelas mensais e o custo total com juros, para tomar decisões conscientes.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Patrimônio em Crescimento (Módulo 6 do E-book):</strong>
+                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
+                                <li><strong>Visão Completa de Riqueza:</strong> Registre seus ativos (investimentos, bens) e passivos (dívidas) para calcular seu patrimônio líquido.</li>
+                                <li><strong>Gráfico de Evolução:</strong> Acompanhe o crescimento do seu patrimônio ao longo do tempo com um gráfico claro e motivador, a verdadeira medida da sua liberdade financeira.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Previsão de Fluxo de Caixa Futuro (Módulo 7 do E-book):</strong>
+                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
+                                <li><strong>Calendário Anual Interativo:</strong> Visualize seu saldo, receitas e despesas mês a mês em um formato de calendário intuitivo.</li>
+                                <li><strong>Eventos Futuros:</strong> Adicione receitas e despesas pontuais (bônus, férias, IPVA) para ter uma projeção ainda mais precisa e evitar surpresas.</li>
+                                <li><strong>Gráfico de Tendências:</strong> Um gráfico de linha mostra a evolução do seu fluxo de caixa, ajudando a identificar períodos de folga ou aperto.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Gerenciador de Assinaturas (Módulo 8 do E-book):</strong>
+                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
+                                <li><strong>Controle Total:</strong> Liste todos os seus serviços recorrentes, valores e datas de renovação.</li>
+                                <li><strong>Oportunidades de Economia:</strong> Identifique rapidamente assinaturas esquecidas ou desnecessárias para otimizar seus gastos.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Resumo Geral Consolidado (Módulo 9 do E-book):</strong>
+                            <ul class="list-circle list-inside ml-5 mt-1 space-y-1">
+                                <li><strong>Panorama Completo:</strong> Uma seção final que reúne os principais dados de todos os passos, oferecendo uma visão holística e consolidada da sua saúde financeira.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="text-slate-700 mt-4">Com essa ferramenta, você não apenas aprende, mas **age e visualiza a sua transformação** em tempo real!</p>
                 </div>
-                <div class="how-it-works-step">
-                    <i class="fas fa-hand-holding-dollar"></i> <!-- Ícone: Mão segurando cifrão (dívida) -->
-                    <h3 class="font-bold text-lg mb-2">Dia 3-4: Ataque às Dívidas</h3>
-                    <p class="text-sm">Identifique suas dívidas e crie um plano estratégico para quitá-las de vez.</p>
-                </div>
-                <div class="how-it-works-step">
-                    <i class="fas fa-piggy-bank"></i> <!-- Ícone: Cofrinho -->
-                    <h3 class="font-bold text-lg mb-2">Dia 5: Construa sua Reserva</h3>
-                    <p class="text-sm">Calcule e comece a formar sua reserva de emergência para ter segurança.</p>
-                </div>
-                <div class="how-it-works-step">
-                    <i class="fas fa-chart-line"></i> <!-- Ícone: Gráfico de linha subindo -->
-                    <h3 class="font-bold text-lg mb-2">Dia 6: Primeiros Investimentos</h3>
-                    <p class="text-sm">Descubra como seu dinheiro pode render e comece a investir com inteligência.</p>
-                </div>
-                 <div class="how-it-works-step">
-                    <i class="fas fa-bullseye"></i> <!-- Ícone: Alvo -->
-                    <h3 class="font-bold text-lg mb-2">Dia 7: Defina Suas Metas</h3>
-                    <p class="text-sm">Transforme seus sonhos em metas financeiras claras e alcançáveis.</p>
-                </div>
-                <div class="how-it-works-step">
-                    <i class="fas fa-sync-alt"></i> <!-- Ícone: Símbolo de sincronização/revisão -->
-                    <h3 class="font-bold text-lg mb-2">Sempre: Revisão e Aceleração</h3>
-                    <p class="text-sm">Dicas extras para manter o controle e acelerar sua jornada continuamente.</p>
+                <!-- E-book (Still present, but positioned as essential guide) -->
+                <div class="bg-blue-50 p-6 rounded-2xl shadow-sm border border-blue-100">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-4 text-center">📘 O E-book: Seu Guia Essencial</h3>
+                    <div class="flex justify-center mb-6">
+                        <img src="https://nekibr.github.io/pagina_vendas/images/capa-ebook.jpg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/300x400/ADD8E6/00008B?text=Capa+Ebook'"
+                             alt="Capa do E-book Planejamento Financeiro em 7 Dias" 
+                             class="rounded-lg shadow-md w-48 md:w-full max-w-xs h-auto object-cover">
+                    </div>
+                    <p class="text-slate-700 mb-4">Este e-book é o seu mapa detalhado. Ele te guia com 7 módulos práticos, sem jargões, para você dominar os conceitos e aplicar cada passo do método:</p>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700">
+                        <li><strong>Módulo 1: Desmistificando as Finanças:</strong> O Início da Jornada.</li>
+                        <li><strong>Módulo 2: Onde Seu Dinheiro Vai?:</strong> Rastreando o Fluxo de Caixa.</li>
+                        <li><strong>Módulo 3: Construindo Seu Orçamento:</strong> Do Caos ao Controle.</li>
+                        <li><strong>Módulo 4: Lidando com Dívidas e Construindo Segurança Financeira.</strong></li>
+                        <li><strong>Módulo 5: Investimentos:</strong> Colocando Seu Dinheiro para Trabalhar para Você.</li>
+                        <li><strong>Módulo 6: Proteção e Planejamento para o Futuro:</strong> Além do Agora.</li>
+                        <li><strong>Módulo 7: Seu Plano de Ação:</strong> Consistência e Próximos Passos.</li>
+                    </ul>
+                    <p class="text-slate-700 mt-4">Conteúdo direto ao ponto, para você aprender de forma simples e eficaz e usar a ferramenta ao máximo.</p>
                 </div>
             </div>
-            <p class="text-center text-xl text-slate-700 mt-10">
-                Cada passo é guiado pelo e-book e facilitado pela ferramenta interativa, tornando o processo simples e eficaz!
-            </p>
         </div>
     </section>
+
+    <!-- How It Works Section (Removed as per request for focus on problem/solution) -->
 
     <!-- Dreams Section -->
     <section class="py-16 bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold text-emerald-600 mb-8">Seus Sonhos Estão Mais Próximos do Que Você Imagina!</h2>
             <p class="text-xl text-slate-700 mb-10">
-                O controle financeiro não é sobre cortar gastos, é sobre <strong>realizar!</strong> Veja como o "Liberdade Financeira em 7 Dias" pode te ajudar a transformar seus maiores desejos em realidade:
+                O controle financeiro não é sobre cortar gastos, é sobre <strong>realizar!</strong> Veja como o <strong>O Mapa da Liberdade</strong> pode te ajudar a transformar seus maiores desejos em realidade:
             </p>
 
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-slate-700">
@@ -329,65 +404,15 @@
                 </div>
             </div>
             <p class="text-center text-xl text-slate-700 mt-10">
-                O <strong>"Liberdade Financeira em 7 Dias"</strong> é o primeiro passo para você transformar esses sonhos em metas e, finalmente, em realidade!
+                O <strong>O Mapa da Liberdade</strong> é o primeiro passo para você transformar esses sonhos em metas e, finalmente, em realidade!
             </p>
-        </div>
-    </section>
-
-    <!-- Product Breakdown Section -->
-    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-emerald-600 mb-12">O Que Você Vai Receber</h2>
-
-            <div class="grid md:grid-cols-2 gap-10 items-start">
-                <!-- E-book -->
-                <div class="bg-blue-50 p-6 rounded-2xl shadow-sm border border-blue-100">
-                    <h3 class="text-2xl font-bold text-blue-700 mb-4 text-center">📘 O E-book Completo</h3>
-                    <div class="flex justify-center mb-6">
-                        <img src="https://nekibr.github.io/pagina_vendas/images/capa-ebook.jpg" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/300x400/ADD8E6/00008B?text=Capa+Ebook'"
-                             alt="Capa do E-book Planejamento Financeiro em 7 Dias" 
-                             class="rounded-lg shadow-md w-48 md:w-full max-w-xs h-auto object-cover">
-                    </div>
-                    <p class="text-slate-700 mb-4">Um guia prático e didático, com 6 capítulos que te levam do zero ao controle financeiro:</p>
-                    <ul class="list-disc list-inside space-y-2 text-slate-700">
-                        <li><strong>Introdução:</strong> Desmistificando as finanças.</li>
-                        <li><strong>Onde Seu Dinheiro Vai?</strong> Entenda seus gastos.</li>
-                        <li><strong>Criando Seu Orçamento:</strong> O mapa para a liberdade.</li>
-                        <li><strong>Dívidas:</strong> Como se livrar delas de vez.</li>
-                        <li><strong>Poupar e Investir:</strong> Seus primeiros passos no mundo dos investimentos.</li>
-                        <li><strong>Metas Financeiras:</strong> Onde você quer chegar?</li>
-                        <li><strong>Dicas Extras:</strong> Renda extra, consumo consciente e revisão.</li>
-                    </ul>
-                    <p class="text-slate-700 mt-4">Conteúdo direto ao ponto, sem jargões complexos, para você aprender de forma simples e eficaz.</p>
-                </div>
-
-                <!-- Ferramenta Interativa -->
-                <div class="bg-emerald-50 p-6 rounded-2xl shadow-sm border border-emerald-100">
-                    <h3 class="text-2xl font-bold text-emerald-700 mb-4 text-center">💻 A Ferramenta Interativa</h3>
-                    <div class="flex justify-center mb-6">
-                        <img src="https://nekibr.github.io/pagina_vendas/images/screenshot-ferramenta.jpg" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/400x300/C8E6C9/1B5E20?text=Screenshot+Ferramenta'"
-                             alt="Screenshot da Ferramenta Interativa de Planejamento Financeiro" 
-                             class="rounded-lg shadow-md w-full max-w-md h-auto object-cover">
-                    </div>
-                    <p class="text-slate-700 mb-4">Aplique a teoria na prática com esta ferramenta fácil de usar, acessível direto do seu navegador (smartphone ou computador):</p>
-                    <ul class="list-disc list-inside space-y-2 text-slate-700">
-                        <li><strong>Calculadora de Orçamento:</strong> Registre suas receitas e despesas e visualize graficamente para onde seu dinheiro vai.</li>
-                        <li><strong>Organizador de Dívidas:</strong> Liste suas dívidas e escolha a melhor estratégia (Bola de Neve ou Avalancha) para quitá-las, com prioridades definidas.</li>
-                        <li><strong>Calculadora de Reserva de Emergência:</strong> Descubra quanto você precisa ter guardado para sua segurança.</li>
-                        <li><strong>Definidor de Metas:</strong> Crie e acompanhe suas metas financeiras de curto, médio e longo prazo.</li>
-                    </ul>
-                    <p class="text-slate-700 mt-4">Transforme números em decisões e veja seu planejamento ganhar vida!</p>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Why Choose This Product Section -->
     <section class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-emerald-600 mb-8">Por Que Escolher "Liberdade Financeira em 7 Dias"?</h2>
+            <h2 class="text-3xl font-bold text-emerald-600 mb-8">Por Que Escolher O Mapa da Liberdade?</h2>
             <ul class="list-none space-y-4 text-lg text-slate-700 font-medium">
                 <li class="flex items-center justify-center gap-3">
                     <span class="text-blue-500 text-2xl">🚀</span>
@@ -395,7 +420,7 @@
                 </li>
                 <li class="flex items-center justify-center gap-3">
                     <span class="text-blue-500 text-2xl">⏰</span>
-                    <span><strong>Resultados em 7 Dias:</strong> Com foco e dedicação, você verá mudanças significativas na sua organização financeira em apenas uma semana.</span>
+                    <span><strong>Resultados Visíveis:</strong> Com foco e dedicação, você verá mudanças significativas na sua organização financeira rapidamente.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
                     <span class="text-blue-500 text-2xl">💰</span>
@@ -403,31 +428,43 @@
                 </li>
                 <li class="flex items-center justify-center gap-3">
                     <span class="text-blue-500 text-2xl">🔒</span>
-                    <span><strong>Acesso Flexível:</strong> E-book em PDF e ferramenta acessível direto do navegador (celular, tablet ou PC), com seus dados salvos!</span>
+                    <span><strong>Acesso Flexível e SEUS DADOS SALVOS:</strong> E-book em PDF e ferramenta acessível direto do navegador (celular, tablet ou PC), com seus dados salvos automaticamente!</span>
+                </li>
+                <li class="flex items-center justify-center gap-3">
+                    <span class="text-blue-500 text-2xl">📈</span>
+                    <span><strong>Simuladores Poderosos:</strong> Projete investimentos e financiamentos para tomar decisões inteligentes sobre seu futuro.</span>
+                </li>
+                <li class="flex items-center justify-center gap-3">
+                    <span class="text-blue-500 text-2xl">💡</span>
+                    <span><strong>Visão 360° do Patrimônio:</strong> Acompanhe o crescimento da sua riqueza e tenha uma previsão do seu fluxo de caixa futuro.</span>
+                </li>
+                <li class="flex items-center justify-center gap-3">
+                    <span class="text-blue-500 text-2xl">✅</span>
+                    <span><strong>Controle Total de Assinaturas:</strong> Gerencie seus serviços recorrentes e identifique oportunidades de economia.</span>
                 </li>
             </ul>
         </div>
     </section>
 
-    <!-- About Author Section (NEW) -->
+    <!-- About Author Section -->
     <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
         <div class="container mx-auto text-center md:flex md:items-center md:text-left">
             <div class="md:w-1/3 flex justify-center mb-6 md:mb-0 md:mr-8">
                 <img src="https://nekibr.github.io/pagina_vendas/images/autor-perfil.jpg" 
                      onerror="this.onerror=null; this.src='https://placehold.co/150x150/ADD8E6/00008B?text=Seu+Avatar'"
-                     alt="Foto do Autor/Criador do Método" 
+                     alt="Foto de Leonardo Brandão, Economista e Especialista em Finanças" 
                      class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-emerald-200">
             </div>
             <div class="md:w-2/3">
                 <h2 class="text-3xl font-bold text-emerald-600 mb-4">Quem Está Por Trás Deste Método?</h2>
                 <p class="text-lg text-slate-700 mb-4">
-                    Olá! Meu nome é <strong>[Seu Nome/Nome da Equipe]</strong> e minha paixão é ajudar pessoas a transformarem sua relação com o dinheiro. Assim como você, já enfrentei desafios financeiros e sei o quanto é libertador ter controle sobre as finanças.
+                    Olá! Meu nome é <strong>Leonardo Brandão</strong>, sou Economista, especialista em finanças pessoais e comportamento financeiro. Minha paixão é entender por que as pessoas tomam decisões ruins com o próprio dinheiro, mesmo sabendo o que é certo.
                 </p>
                 <p class="text-lg text-slate-700 mb-4">
-                    Com anos de estudo e experiência prática em [mencione brevemente sua área de expertise, ex: educação financeira, investimentos, organização de negócios], desenvolvi o <strong>"Método 7 Dias para a Liberdade Financeira"</strong> para simplificar o que parece complexo e te dar as ferramentas exatas para você começar a ver resultados reais em apenas uma semana.
+                    Com mais de 18 anos de carreira em bancos, fintechs e consultorias, percebi que o problema não era só falta de conhecimento, mas sim falta de método, clareza e controle. Foi assim que desenvolvi os pilares que hoje sustentam o <strong>"O Mapa da Liberdade"</strong>.
                 </p>
                 <p class="text-lg text-slate-700">
-                    Minha missão é te guiar nessa jornada, provando que a liberdade financeira está ao seu alcance.
+                    Minha missão é democratizar o controle financeiro, tornando o planejamento acessível a qualquer pessoa, sem complicação, sem economês, e sem fórmulas mágicas. Como costumo dizer: "Liberdade financeira não é sobre ficar rico. É sobre dormir tranquilo no fim do mês."
                 </p>
             </div>
         </div>
@@ -479,22 +516,48 @@
     </section>
 
     <!-- Pricing and Final CTA -->
-    <section id="comprar" class="py-16 bg-gradient-to-br from-emerald-100 to-blue-100 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6 text-center">
+    <section id="comprar" class="py-16 bg-gradient-to-br from-emerald-100 to-blue-100 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-emerald-800 mb-6">Comece sua Jornada para a Liberdade Financeira Agora!</h2>
+            <h2 class="text-3xl font-bold text-emerald-800 mb-6">Comece sua Jornada para a Paz Financeira Agora!</h2>
+            <p class="text-xl text-slate-700 mb-4">
+                Você não está pagando por um e-book ou uma ferramenta. Você está investindo na sua <strong>paz de espírito</strong>, no seu <strong>controle financeiro</strong> e na <strong>realização dos seus sonhos</strong>!
+            </p>
             <p class="text-4xl md:text-5xl font-extrabold text-emerald-600 mb-4">
                 De <span class="text-red-500 line-through">R$ 99,90</span> por apenas
             </p>
             <p class="text-6xl md:text-7xl font-extrabold text-emerald-800 mb-8">
                 R$ 59,90
             </p>
-            <p class="text-lg text-slate-700 mb-8">Acesso imediato ao e-book completo e à ferramenta interativa!</p>
+            <p class="text-lg text-slate-700 mb-8">
+                Este é o valor de uma pizza, de um jantar fora, ou de alguns cafés. Mas, em vez de um prazer momentâneo, você terá acesso imediato ao e-book completo e à ferramenta interativa que podem transformar sua vida financeira para sempre!
+            </p>
 
             <a href="https://SEU_LINK_DE_CHECKOUT_AQUI.com.br" target="_blank" class="btn-primary">
-                Comprar Agora e Transformar Minhas Finanças!
+                Comprar Agora e Conquistar Minha Paz Financeira!
             </a>
 
-            <p class="mt-8 text-sm text-slate-600">Pagamento seguro via [Nome da Plataforma de Pagamento].</p>
+            <div class="mt-8 flex flex-wrap justify-center items-center gap-4">
+                <div class="payment-badges flex justify-center items-center">
+                    <img src="https://nekibr.github.io/pagina_vendas/images/bandeiras-cartao.png" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/150x30/FFFFFF/000000?text=Bandeiras'"
+                         alt="Bandeiras de Cartão (Visa, MasterCard, Elo)">
+                    <img src="https://nekibr.github.io/pagina_vendas/images/logo-pix.png" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/50x30/FFFFFF/000000?text=Pix'"
+                         alt="Logo Pix">
+                    <img src="https://nekibr.github.io/pagina_vendas/images/logo-boleto.png" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/50x30/FFFFFF/000000?text=Boleto'"
+                         alt="Logo Boleto">
+                </div>
+                <div class="security-badges flex justify-center items-center">
+                    <img src="https://nekibr.github.io/pagina_vendas/images/selo-seguranca.png" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x40/FFFFFF/000000?text=Seguro'"
+                         alt="Selo de Compra Segura">
+                    <img src="https://nekibr.github.io/pagina_vendas/images/selo-garantia.png" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x40/FFFFFF/000000?text=Garantia'"
+                         alt="Selo de Garantia de 7 Dias">
+                </div>
+            </div>
+            <p class="mt-4 text-sm text-slate-600">Pagamento seguro via [Nome da Plataforma de Pagamento].</p>
              <p class="text-sm text-slate-600 mt-2">
                 <strong>GARANTIA INCONDICIONAL DE 7 DIAS:</strong> Sua satisfação ou seu dinheiro de volta!
             </p>
@@ -507,7 +570,7 @@
             <h2 class="text-3xl font-bold text-center text-emerald-600 mb-8">Perguntas Frequentes</h2>
             <div class="space-y-6 text-slate-700">
                 <div>
-                    <h3 class="font-bold text-xl mb-2">O que é o "Liberdade Financeira em 7 Dias"?</h3>
+                    <h3 class="font-bold text-xl mb-2">O que é o "O Mapa da Liberdade"?</h3>
                     <p>É um produto digital que combina um e-book completo com um guia prático para organização financeira e uma ferramenta interativa que te ajuda a aplicar os conceitos de forma visual e dinâmica.</p>
                 </div>
                 <div>
@@ -531,7 +594,7 @@
     </section>
 
     <footer class="text-center mt-12 mb-4 text-sm text-slate-500">
-        <p>© 2025 Liberdade Financeira em 7 Dias. Todos os direitos reservados.</p>
+        <p>© 2025 O Mapa da Liberdade. Todos os direitos reservados.</p>
     </footer>
 
 </body>
