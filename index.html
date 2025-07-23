@@ -3,68 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Mapa da Liberdade: A Ferramenta Interativa que Transforma Suas Finanças</title>
+    <title>O Mapa da Liberdade: Conquiste Sua Paz Financeira e Realize Seus Sonhos!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="https://nekibr.github.io/pagina_vendas/images/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Chosen Palette: Calm Harmony -->
-    <!-- Application Structure Plan: This single-page sales funnel is now heavily optimized around the interactive tool as the core value proposition, complemented by the e-book. The structure emphasizes problem-solving, detailed feature benefits, and emotional connection. It flows from a strong hero, through problem identification, a comprehensive breakdown of the tool's advanced features, emotional drivers (dreams), credibility builders (how it works, author, testimonials), and culminates in a clear, trust-reinforced CTA. The VSL section has been removed to streamline the focus on textual and image-based persuasion. -->
-    <!-- Visualization & Content Choices:
-        - Hero Section: Goal: Capture Attention. Method: Bold headline, benefit-driven subheadline, strong CTA button, and a prominent product visual (e-book cover + tool screenshot composite). Justification: Immediate impact and clear value proposition, now emphasizing the tool's central role.
-        - Problem-Solution: Goal: Connect/Educate. Method: Text blocks with clear headings and bullet points. Justification: Builds empathy and positions the tool as the definitive remedy.
-        - Tool Features (Detailed Breakdown): Goal: Inform/Differentiate/Persuade. Method: Concise, benefit-driven description of the tool's core functionalities, emphasizing problems solved and transformation. Image placeholders for relevant tool screenshots. Justification: Clearly articulates the unique and advanced capabilities of the interactive tool, justifying its value with a stronger focus on user benefits and a transformational tone.
-        - Dreams Section: Goal: Emotional Connection/Aspiration. Method: Text and a grid of dream scenarios with images. Justification: Directly appeals to the user's deepest desires, showing the ultimate outcome of financial control.
-        - How It Works Section: Goal: Clarify Process/Reduce Friction. Method: Visual step-by-step breakdown using Font Awesome icons. Justification: Makes the "7 Days" promise more concrete and achievable.
-        - About Author Section: Goal: Build Trust/Authority. Method: Bio with professional photo. Justification: Humanizes the product and builds credibility.
-        - Testimonials: Goal: Build Trust. Method: Quoted testimonials with avatars. Justification: Leverages social proof.
-        - Pricing & CTA: Goal: Convert. Method: Clear pricing, prominent button. Payment and security badges have been removed as per user request. Pricing justification is enhanced with "preço de lançamento" and original price. Interaction: Click to external checkout link. Justification: Finalizes the offer and directs to purchase, reinforcing trust and urgency.
-        - FAQ: Goal: Address Objections. Method: List of common questions and answers. Justification: Proactively resolves potential buyer hesitations.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    
+    <!-- Estilos personalizados para a página de vendas -->
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            /* Garante que o corpo da página ocupe toda a altura da viewport em telas pequenas */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Estilo principal para botões de ação (CTA) */
         .btn-primary {
             display: inline-block;
-            padding: 1rem 2.5rem;
+            padding: 1.25rem 3rem; /* Aumenta o padding para botões maiores e mais clicáveis */
             background-color: #10B981; /* Emerald 500 */
             color: white;
             text-decoration: none;
             border-radius: 0.75rem; /* rounded-xl */
-            font-weight: 700; /* font-bold */
-            font-size: 1.25rem; /* text-xl */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: 800; /* font-extrabold para mais impacto */
+            font-size: 1.5rem; /* text-2xl para maior visibilidade */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25); /* Sombra mais pronunciada */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            text-transform: uppercase; /* Texto em maiúsculas para destaque */
+            letter-spacing: 0.05em; /* Espaçamento entre letras */
         }
         .btn-primary:hover {
             background-color: #059669; /* Emerald 600 */
-            transform: translateY(-2px);
+            transform: translateY(-3px); /* Efeito de "levantar" no hover */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Sombra ainda maior no hover */
         }
+        /* Estilo para texto com gradiente */
         .text-gradient {
             background: linear-gradient(to right, #06B6D4, #10B981); /* Cyan to Emerald */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        /* Estilo para cards de depoimentos */
         .testimonial-card {
             background-color: white;
             padding: 1.5rem;
             border-radius: 0.75rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra mais suave */
             border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza conteúdo no card */
+            text-align: center; /* Centraliza texto no card */
         }
+        /* Estilo para avatares de depoimentos */
         .testimonial-avatar {
-            width: 50px;
-            height: 50px;
+            width: 64px; /* Aumenta o tamanho do avatar */
+            height: 64px; /* Aumenta o tamanho do avatar */
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #10B981;
+            border: 3px solid #10B981; /* Borda mais grossa */
+            margin-bottom: 1rem; /* Espaçamento abaixo do avatar */
         }
+        /* Garante que o negrito seja sempre bold */
         strong, b {
-            font-weight: bold; /* Garante que o negrito seja sempre bold */
+            font-weight: bold; 
         }
+        /* Estilo para cards de sonhos */
         .dream-card {
             background-color: #F0FDF4; /* Emerald 50 light */
             padding: 1.5rem;
@@ -75,36 +83,66 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Adiciona transição para hover */
         }
+        .dream-card:hover {
+            transform: translateY(-5px); /* Efeito de "levantar" no hover */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra mais forte no hover */
+        }
+        /* Estilo para imagens dentro dos cards de sonhos */
         .dream-card img {
             width: 100%;
-            height: 150px; /* Fixed height for consistency */
+            height: 180px; /* Aumenta a altura fixa para consistência e impacto visual */
             object-fit: cover;
             border-radius: 0.5rem;
             margin-bottom: 1rem;
         }
+        /* Estilo para passos da seção "Como Funciona" */
         .how-it-works-step {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem; /* Aumenta o padding */
             background-color: #E0F2F7; /* Blue 50 light */
             border-radius: 0.75rem;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             border: 1px solid #BFDBFE; /* Blue 100 */
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Adiciona transição para hover */
         }
-        .how-it-works-step i { /* Styling for Font Awesome icons */
-            font-size: 3rem; /* Adjust size as needed */
+        .how-it-works-step:hover {
+            transform: translateY(-5px); /* Efeito de "levantar" no hover */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra mais forte no hover */
+        }
+        /* Estilo para ícones Font Awesome nos passos "Como Funciona" */
+        .how-it-works-step i { 
+            font-size: 3.5rem; /* Aumenta o tamanho do ícone */
             color: #059669; /* Emerald 600 */
-            margin-bottom: 0.5rem;
-            width: 80px; /* Match old image width */
-            height: 80px; /* Match old image height */
+            margin-bottom: 1rem; /* Aumenta o espaçamento */
+            width: 90px; /* Ajusta a largura para o novo tamanho do ícone */
+            height: 90px; /* Ajusta a altura para o novo tamanho do ícone */
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: #D1FAE5; /* Fundo suave para o ícone */
+            border-radius: 50%; /* Torna o fundo do ícone redondo */
         }
-        /* Removido: .payment-badges img e .security-badges img */
+
+        /* Estilos para a seção de autor */
+        .author-section-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .author-section-content {
+                flex-direction: row;
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
     </style>
 </head>
     <!-- Google tag (gtag.js) -->
@@ -118,407 +156,413 @@
 </script>
 <body class="bg-stone-50 text-slate-800 leading-relaxed">
 
-    <!-- Hero Section -->
+    <!-- Hero Section: Captura a atenção e apresenta a proposta de valor principal -->
     <header class="bg-gradient-to-br from-emerald-50 to-blue-50 py-16 md:py-24 text-center rounded-b-3xl shadow-md">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-gradient">
-                O Mapa da Liberdade
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-gradient">
+                Conquiste Sua Liberdade Financeira com <br class="hidden md:inline">O Mapa da Liberdade!
             </h1>
-            <p class="text-xl md:text-2xl text-slate-700 mb-8 max-w-2xl mx-auto">
-                O guia completo (E-book) e a plataforma definitiva para organizar, planejar e visualizar seu progresso financeiro de forma clara e motivadora.
+            <p class="text-xl md:text-2xl text-slate-700 mb-8 max-w-3xl mx-auto">
+                Diga adeus às preocupações com dinheiro! Descubra o guia completo (E-book) e a ferramenta interativa que vão transformar suas finanças, de forma simples, clara e motivadora.
             </p>
             <a href="#comprar" class="btn-primary">
-                Quero Meu Mapa da Liberdade Agora!
+                Sim, Eu Quero Minha Liberdade Financeira!
             </a>
             <div class="mt-12 flex justify-center">
-                <!--  -->
+                <!-- Imagem principal do produto (e-book + ferramenta) -->
                 <img src="https://nekibr.github.io/pagina_vendas/images/capa-e-ferramenta.jpg" 
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/D1FAE5/065F46?text=Capa+Ebook+%2B+Ferramenta'"
-                     alt="Capa do O Mapa da Liberdade e Ferramenta Interativa" 
-                     class="rounded-xl shadow-lg w-full max-w-lg h-auto md:h-64 object-cover">
+                     onerror="this.onerror=null; this.src='https://placehold.co/700x450/D1FAE5/065F46?text=Capa+Ebook+%2B+Ferramenta'"
+                     alt="O Mapa da Liberdade: Ebook e Ferramenta Interativa" 
+                     class="rounded-xl shadow-lg w-full max-w-2xl h-auto object-cover">
             </div>
         </div>
     </header>
 
-    <!-- Problem Section -->
-    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <!-- Problem Section: Conecta com as dores do público-alvo -->
+    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-emerald-600 mb-8">Você se identifica com algum destes desafios?</h2>
-            <p class="text-xl text-slate-700 mb-8 text-center">
-                A verdade é que a maioria das pessoas se sente assim. Mas não precisa ser a sua realidade!
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-emerald-600 mb-10">Você se vê em alguma destas situações?</h2>
+            <p class="text-xl text-slate-700 mb-10 text-center">
+                Muitas pessoas enfrentam esses desafios. Mas a boa notícia é que você não precisa mais viver assim!
             </p>
             <div class="grid md:grid-cols-2 gap-8 text-lg text-slate-700">
-                <div class="flex items-start gap-3 bg-red-50 p-4 rounded-xl shadow-sm">
-                    <span class="text-red-500 text-2xl">❌</span>
-                    <p>O salário mal entra e já parece que <strong>some</strong>, deixando você no vermelho antes do fim do mês?</p>
+                <div class="flex items-start gap-4 bg-red-50 p-5 rounded-xl shadow-sm border border-red-100">
+                    <span class="text-red-500 text-3xl flex-shrink-0">❌</span>
+                    <p>O salário mal entra e já parece que <strong>desaparece</strong>, deixando você no vermelho antes do fim do mês?</p>
                 </div>
-                <div class="flex items-start gap-3 bg-red-50 p-4 rounded-xl shadow-sm">
-                    <span class="text-red-500 text-2xl">❌</span>
-                    <p><strong>Dívidas acumuladas</strong> tiram seu sono e você não sabe por onde começar a pagá-las?</p>
+                <div class="flex items-start gap-4 bg-red-50 p-5 rounded-xl shadow-sm border border-red-100">
+                    <span class="text-red-500 text-3xl flex-shrink-0">❌</span>
+                    <p><strong>Dívidas acumuladas</strong> tiram seu sono e você não sabe por onde começar a se livrar delas?</p>
                 </div>
-                <div class="flex items-start gap-3 bg-red-50 p-4 rounded-xl shadow-sm">
-                    <span class="text-red-500 text-2xl">❌</span>
-                    <p>Quer <strong>economizar e investir</strong> para o futuro, mas acha que é algo muito complicado, distante ou "para ricos"?</p>
+                <div class="flex items-start gap-4 bg-red-50 p-5 rounded-xl shadow-sm border border-red-100">
+                    <span class="text-red-500 text-3xl flex-shrink-0">❌</span>
+                    <p>Quer <strong>economizar e investir</strong>, mas acha que é algo muito complicado ou "apenas para especialistas"?</p>
                 </div>
-                <div class="flex items-start gap-3 bg-red-50 p-4 rounded-xl shadow-sm">
-                    <span class="text-red-500 text-2xl">❌</span>
-                    <p>Sente que não tem <strong>controle algum</strong> sobre suas finanças pessoais, vivendo em um ciclo de preocupação constante?</p>
+                <div class="flex items-start gap-4 bg-red-50 p-5 rounded-xl shadow-sm border border-red-100">
+                    <span class="text-red-500 text-3xl flex-shrink-0">❌</span>
+                    <p>Sente que não tem <strong>controle algum</strong> sobre suas finanças, vivendo em um ciclo de preocupação constante?</p>
                 </div>
-                <div class="flex items-start gap-3 bg-red-50 p-4 rounded-xl shadow-sm">
-                    <span class="text-red-500 text-2xl">❌</span>
-                    <p>Você tem <strong>medo de olhar sua conta bancária</strong> ou fazer as contas do mês?</p>
+                <div class="flex items-start gap-4 bg-red-50 p-5 rounded-xl shadow-sm border border-red-100">
+                    <span class="text-red-500 text-3xl flex-shrink-0">❌</span>
+                    <p>Você tem <strong>medo de olhar sua conta bancária</strong> ou fazer as contas do mês, preferindo ignorar a situação?</p>
                 </div>
-                <div class="flex items-start gap-3 bg-red-50 p-4 rounded-xl shadow-sm">
-                    <span class="text-red-500 text-2xl">❌</span>
-                    <p>Sonha em realizar grandes objetivos, mas não consegue guardar dinheiro para <strong>tirar seus sonhos do papel</strong>?</p>
+                <div class="flex items-start gap-4 bg-red-50 p-5 rounded-xl shadow-sm border border-red-100">
+                    <span class="text-red-500 text-3xl flex-shrink-0">❌</span>
+                    <p>Sonha em realizar grandes objetivos, mas a falta de dinheiro parece sempre <strong>impedir seus planos</strong>?</p>
                 </div>
             </div>
-            <p class="text-center text-xl text-slate-700 mt-10">
-                Se você respondeu "sim" para qualquer um desses pontos, você não está sozinho(a)! Mas a boa notícia é que existe uma solução clara e prática.
+            <p class="text-center text-xl text-slate-700 mt-12">
+                Se você se identificou, saiba que existe um caminho claro para mudar essa realidade.
             </p>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="py-16 bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <!-- Solution Section: Apresenta O Mapa da Liberdade como a solução definitiva -->
+    <section class="py-16 bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-emerald-600 mb-8">Chega de preocupação, comece a transformar!</h2>
-            <p class="text-xl text-slate-700 mb-6">
-                Com o <strong>O Mapa da Liberdade</strong>, você terá a bússola e o mapa para:
+            <h2 class="text-3xl md:text-4xl font-bold text-emerald-700 mb-8">Chega de preocupação, comece a transformar sua vida financeira!</h2>
+            <p class="text-xl text-slate-700 mb-8">
+                Com o <strong>O Mapa da Liberdade</strong>, você terá o passo a passo e as ferramentas para:
             </p>
-            <ul class="list-none space-y-4 text-lg text-slate-700 font-medium">
+            <ul class="list-none space-y-5 text-xl text-slate-700 font-medium">
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-emerald-500 text-2xl">✅</span>
-                    <span><strong>Descobrir para onde seu dinheiro realmente vai</strong> e cortar gastos desnecessários.</span>
+                    <span class="text-emerald-500 text-3xl">✅</span>
+                    <span><strong>Descobrir para onde seu dinheiro vai</strong> e eliminar gastos desnecessários, sem sacrifícios.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-emerald-500 text-2xl">✅</span>
-                    <span><strong>Criar um orçamento que funcione para você</strong>, sem apertos e com total clareza.</span>
+                    <span class="text-emerald-500 text-3xl">✅</span>
+                    <span><strong>Criar um orçamento que realmente funcione</strong> para você, com total clareza e sem apertos.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-emerald-500 text-2xl">✅</span>
-                    <span><strong>Quitar suas dívidas de forma estratégica e eficiente</strong>, liberando-se desse peso.</span>
+                    <span class="text-emerald-500 text-3xl">✅</span>
+                    <span><strong>Quitar suas dívidas de forma inteligente e rápida</strong>, libertando-se desse peso de uma vez por todas.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-emerald-500 text-2xl">✅</span>
-                    <span><strong>Construir sua reserva de emergência e começar a investir</strong>, multiplicando seu patrimônio.</span>
+                    <span class="text-emerald-500 text-3xl">✅</span>
+                    <span><strong>Construir sua reserva de emergência e começar a investir</strong>, fazendo seu dinheiro trabalhar para você.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-emerald-500 text-2xl">✅</span>
-                    <span><strong>Definir metas financeiras claras e alcançáveis</strong>, transformando seus sonhos em realidade.</span>
+                    <span class="text-emerald-500 text-3xl">✅</span>
+                    <span><strong>Definir e alcançar metas financeiras ambiciosas</strong>, transformando seus maiores sonhos em realidade.</span>
                 </li>
             </ul>
         </div>
     </section>
 
-    <!-- The Transformation You Deserve Section -->
-    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <!-- The Transformation You Deserve Section: Mostra o contraste entre o "antes" e "depois" -->
+    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-emerald-600 mb-8">A Transformação que Você Merece: Paz e Controle</h2>
-            <div class="grid md:grid-cols-2 gap-8 text-lg text-slate-700">
-                <div>
-                    <h3 class="text-2xl font-bold text-emerald-700 mb-4">Antes da Transformação:</h3>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li>Sentia ansiedade ao pensar nas contas.</li>
-                        <li>Dinheiro sumia e você não sabia o motivo.</li>
-                        <li>Dívidas se acumulavam sem controle.</li>
-                        <li>Sonhos e metas pareciam inalcançáveis.</li>
-                        <li>Não tinha uma reserva para imprevistos.</li>
+            <h2 class="text-3xl md:text-4xl font-bold text-emerald-600 mb-10">A Transformação que Você Merece: Paz, Controle e Realização</h2>
+            <div class="grid md:grid-cols-2 gap-10 text-lg text-slate-700">
+                <div class="bg-red-50 p-6 rounded-xl shadow-sm border border-red-100">
+                    <h3 class="text-2xl font-bold text-red-700 mb-4">Sua Realidade <span class="font-extrabold text-3xl">ANTES</span> do Mapa:</h3>
+                    <ul class="list-disc list-inside space-y-3 text-left">
+                        <li>Sentia uma <strong>ansiedade constante</strong> ao pensar nas contas.</li>
+                        <li>Dinheiro parecia <strong>sumir</strong> e você não sabia o motivo.</li>
+                        <li>Dívidas se <strong>acumulavam</strong> sem controle, gerando estresse.</li>
+                        <li>Sonhos e metas pareciam <strong>distantes e inalcançáveis</strong>.</li>
+                        <li>Não tinha uma <strong>reserva</strong> para imprevistos, vivendo no limite.</li>
+                        <li>Sentia-se <strong>preso(a)</strong> em um ciclo financeiro vicioso.</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-blue-700 mb-4">Depois da Transformação:</h3>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li>Sente <strong>paz e segurança</strong> com suas finanças.</li>
-                        <li>Tem total <strong>clareza</strong> sobre cada centavo.</li>
-                        <li><strong>Quitou suas dívidas</strong> e vive sem esse peso.</li>
-                        <li>Está construindo seu futuro, com <strong>dinheiro rendendo</strong>.</li>
-                        <li>Seus <strong>sonhos viraram metas</strong> e estão cada vez mais perto!</li>
+                <div class="bg-emerald-50 p-6 rounded-xl shadow-sm border border-emerald-100">
+                    <h3 class="text-2xl font-bold text-emerald-700 mb-4">Sua Vida <span class="font-extrabold text-3xl">DEPOIS</span> do Mapa:</h3>
+                    <ul class="list-disc list-inside space-y-3 text-left">
+                        <li>Sente <strong>paz e segurança</strong> com suas finanças, sem estresse.</li>
+                        <li>Tem total <strong>clareza</strong> sobre cada centavo, onde entra e onde sai.</li>
+                        <li><strong>Quitou suas dívidas</strong> e vive sem esse peso, com leveza.</li>
+                        <li>Está construindo seu futuro, com seu <strong>dinheiro rendendo</strong> e crescendo.</li>
+                        <li>Seus <strong>sonhos viraram metas</strong> e estão cada vez mais próximos de se concretizar!</li>
+                        <li>Sente-se <strong>livre e no controle</strong> total da sua vida financeira.</li>
                     </ul>
                 </div>
             </div>
-            <p class="text-center text-xl text-slate-700 mt-10">
-                Esta não é uma promessa vazia. É um convite para você tomar as rédeas da sua vida financeira com ferramentas claras e eficazes.
+            <p class="text-center text-xl text-slate-700 mt-12">
+                Esta não é uma promessa vazia. É um convite para você tomar as rédeas da sua vida financeira com ferramentas claras, eficazes e comprovadas.
             </p>
         </div>
     </section>
 
-    <!-- Product Breakdown Section - Updated to focus on the tool -->
-    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <!-- Product Breakdown Section: Detalha o e-book e a ferramenta interativa -->
+    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-emerald-600 mb-12">Conheça a Ferramenta Interativa: Seu Assistente Financeiro Completo!</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-emerald-600 mb-12">O Mapa da Liberdade: Seu Caminho Completo para a Paz Financeira</h2>
 
-            <p class="text-xl text-slate-700 mb-8 text-center">
-                Desenvolvemos uma plataforma intuitiva e poderosa, projetada para transformar a teoria do seu e-book em ação prática. Com um design moderno e focado na experiência do usuário, nossa ferramenta é o seu assistente pessoal para organizar, planejar e visualizar seu progresso financeiro de forma clara e motivadora.
+            <p class="text-xl text-slate-700 mb-10 text-center">
+                Este é um combo poderoso: um guia prático (E-book) e uma ferramenta interativa (Finanças em Ação) que se complementam para te levar do caos financeiro à total liberdade!
             </p>
 
-            <div class="grid md:grid-cols-1 gap-10 items-start">
+            <div class="grid md:grid-cols-1 gap-12 items-start">
                 <!-- Ferramenta Interativa - Detalhamento Completo -->
-                <div class="bg-emerald-50 p-6 rounded-2xl shadow-sm border border-emerald-100">
-                    <h3 class="text-2xl font-bold text-emerald-700 mb-4 text-center">✨ A Ferramenta "Finanças em Ação": O Poder nas Suas Mãos!</h3>
-                    <p class="text-slate-700 mb-4">Sua plataforma completa, acessível direto do navegador (smartphone ou computador), com funcionalidades exclusivas para você ver a transformação acontecer:</p>
+                <div class="bg-emerald-50 p-8 rounded-2xl shadow-lg border border-emerald-100">
+                    <h3 class="text-3xl font-bold text-emerald-700 mb-6 text-center">✨ A Ferramenta "Finanças em Ação": Seu Assistente Financeiro Pessoal!</h3>
+                    <p class="text-xl text-slate-700 mb-6 text-center">
+                        Sua plataforma completa, acessível de qualquer lugar (smartphone ou computador), com funcionalidades exclusivas para você ver a transformação acontecer em tempo real:
+                    </p>
                     
-                    <div class="flex justify-center mb-6">
+                    <div class="flex justify-center mb-8">
+                        <!-- Screenshot da ferramenta -->
                         <img src="https://nekibr.github.io/pagina_vendas/images/screenshot-ferramenta.jpg" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/400x300/C8E6C9/1B5E20?text=Screenshot+Ferramenta'"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/C8E6C9/1B5E20?text=Screenshot+Ferramenta'"
                              alt="Screenshot da Ferramenta Interativa Finanças em Ação" 
-                             class="rounded-lg shadow-md w-full max-w-md h-auto object-cover">
+                             class="rounded-lg shadow-xl w-full max-w-2xl h-auto object-cover">
                     </div>
 
-                    <ul class="list-disc list-inside space-y-4 text-slate-700">
-                        <li><strong>Visão Financeira 360° Instantânea:</strong> Chega de surpresas! Tenha um panorama completo das suas finanças, com receitas e despesas claras, e veja seu progresso em tempo real.</li>
-                        <li><strong>Orçamento Descomplicado:</strong> Crie um orçamento que funciona para VOCÊ, compare com a regra 50/30/20 e saiba exatamente onde ajustar para ter equilíbrio.</li>
+                    <ul class="list-disc list-inside space-y-5 text-lg text-slate-700">
+                        <li><strong>Dashboard Intuitivo:</strong> Tenha uma visão 360° das suas finanças, com receitas e despesas claras, e acompanhe seu progresso em tempo real.</li>
+                        <li><strong>Orçamento Personalizado:</strong> Crie um orçamento que se adapta à sua realidade, compare com a regra 50/30/20 e saiba exatamente onde otimizar seus gastos.</li>
                         <li><strong>Plano de Dívidas Estratégico com Simulador:</strong> Transforme o pesadelo das dívidas em um plano de ação claro. Escolha a melhor estratégia (Bola de Neve ou Avalancha) e simule em quanto tempo você se liberta adicionando um valor extra. Veja a luz no fim do túnel!</li>
-                        <li><strong>Metas e Sonhos com Progresso Visual:</strong> Calcule sua reserva de emergência e crie metas realistas. Acompanhe seu progresso com barras visuais que te impulsionam a economizar para seus sonhos (viagem, carro, casa!).</li>
+                        <li><strong>Metas e Sonhos com Progresso Visual:</strong> Calcule sua reserva de emergência e crie metas realistas para seus sonhos (viagem, carro, casa!). Acompanhe seu progresso com barras visuais que te impulsionam a economizar.</li>
                         <li><strong>Simuladores Poderosos para o Futuro:</strong> Projete o crescimento do seu dinheiro com o simulador de investimentos (juros compostos a seu favor!) e entenda o custo real de financiamentos para decisões conscientes.</li>
                         <li><strong>Patrimônio e Fluxo de Caixa em Crescimento:</strong> Monitore sua riqueza e tenha uma previsão clara do seu dinheiro mês a mês com um calendário interativo. Evite surpresas e planeje com antecedência.</li>
                         <li><strong>Previsão de Fluxo de Caixa Futuro:</strong> Visualize seu saldo, receitas e despesas mês a mês em um calendário intuitivo, adicione eventos futuros e veja a evolução do seu fluxo de caixa com gráficos de tendências.</li>
-                        <li><strong>Resumo Geral Consolidado:</strong> Uma seção final que reúne os principais dados de todos os passos, oferecendo umaa visão holística e consolidada da sua saúde financeira.</li>
+                        <li><strong>Resumo Geral Consolidado:</strong> Uma seção final que reúne os principais dados de todos os passos, oferecendo uma visão holística e consolidada da sua saúde financeira.</li>
                     </ul>
-                    <p class="text-slate-700 mt-4">Com a **"Finanças em Ação"**, você não apenas aprende, mas **age, visualiza e acelera a sua transformação financeira** rumo à liberdade!</p>
+                    <p class="text-xl text-slate-700 mt-8 text-center">
+                        Com a **"Finanças em Ação"**, você não apenas aprende, mas **age, visualiza e acelera a sua transformação financeira** rumo à liberdade!
+                    </p>
                 </div>
-                <!-- E-book (Still present, but positioned as essential guide) -->
-                <div class="bg-blue-50 p-6 rounded-2xl shadow-sm border border-blue-100">
-                    <h3 class="text-2xl font-bold text-blue-700 mb-4 text-center">📘 O E-book: Seu Guia Essencial</h3>
-                    <div class="flex justify-center mb-6">
+
+                <!-- E-book (Ainda essencial como guia teórico) -->
+                <div class="bg-blue-50 p-8 rounded-2xl shadow-lg border border-blue-100">
+                    <h3 class="text-3xl font-bold text-blue-700 mb-6 text-center">📘 O E-book: Seu Guia Essencial Passo a Passo!</h3>
+                    <p class="text-xl text-slate-700 mb-6 text-center">
+                        Este e-book é o seu mapa detalhado. Ele te guia com 8 módulos práticos, sem jargões complexos, para você dominar os conceitos e aplicar cada passo do método de forma simples e eficaz:
+                    </p>
+                    <div class="flex justify-center mb-8">
+                        <!-- Capa do e-book -->
                         <img src="https://nekibr.github.io/pagina_vendas/images/capa-ebook.jpg" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/300x400/ADD8E6/00008B?text=Capa+Ebook'"
-                             alt="Capa do E-book Planejamento Financeiro em 7 Dias" 
-                             class="rounded-lg shadow-md w-48 md:w-full max-w-xs h-auto object-cover">
+                             onerror="this.onerror=null; this.src='https://placehold.co/400x500/ADD8E6/00008B?text=Capa+Ebook'"
+                             alt="Capa do E-book O Mapa da Liberdade" 
+                             class="rounded-lg shadow-xl w-full max-w-xs h-auto object-cover">
                     </div>
-                    <p class="text-slate-700 mb-4">Este e-book é o seu mapa detalhado. Ele te guia com 8 módulos práticos, sem jargões, para você dominar os conceitos e aplicar cada passo do método:</p>
-                    <ul class="list-disc list-inside space-y-2 text-slate-700">
-                        <li><strong>Módulo 1: Desmistificando as Finanças:</strong> O Início da Jornada.</li>
-                        <li><strong>Módulo 2: Onde Seu Dinheiro Vai?:</strong> Rastreando o Fluxo de Caixa.</li>
-                        <li><strong>Módulo 3: Construindo Seu Orçamento:</strong> Do Caos ao Controle.</li>
-                        <li><strong>Módulo 4: Lidando com Dívidas e Construindo Segurança Financeira.</strong></li>
-                        <li><strong>Módulo 5: Investimentos:</strong> Colocando Seu Dinheiro para Trabalhar para Você.</li>
-                        <li><strong>Módulo 6: Proteção e Planejamento para o Futuro:</strong> Além do Agora.</li>
-                        <li><strong>Módulo 7: Seu Plano de Ação:</strong> Consistência e Próximos Passos.</li>
-                        <li><strong>Módulo 8: Dominando Sua Ferramenta Interativa:</strong> "Finanças em Ação".</li>
+                    <ul class="list-disc list-inside space-y-4 text-lg text-slate-700">
+                        <li><strong>Módulo 1: Desmistificando as Finanças:</strong> O Início da Jornada para o controle.</li>
+                        <li><strong>Módulo 2: Onde Seu Dinheiro Vai?:</strong> Rastreando o Fluxo de Caixa e identificando vazamentos.</li>
+                        <li><strong>Módulo 3: Construindo Seu Orçamento:</strong> Do Caos ao Controle, um guia prático e sem dor de cabeça.</li>
+                        <li><strong>Módulo 4: Lidando com Dívidas e Construindo Segurança Financeira:</strong> Estratégias para se livrar das dívidas e criar sua reserva.</li>
+                        <li><strong>Módulo 5: Investimentos:</strong> Colocando Seu Dinheiro para Trabalhar para Você, de forma simples e segura.</li>
+                        <li><strong>Módulo 6: Proteção e Planejamento para o Futuro:</strong> Além do Agora, garantindo sua tranquilidade a longo prazo.</li>
+                        <li><strong>Módulo 7: Seu Plano de Ação:</strong> Consistência e Próximos Passos para manter o ritmo e acelerar resultados.</li>
+                        <li><strong>Módulo 8: Dominando Sua Ferramenta Interativa:</strong> "Finanças em Ação", para você extrair o máximo da plataforma.</li>
                     </ul>
-                    <p class="text-slate-700 mt-4">Conteúdo direto ao ponto, para você aprender de forma simples e eficaz e usar a ferramenta ao máximo.</p>
+                    <p class="text-xl text-slate-700 mt-8 text-center">
+                        Conteúdo direto ao ponto, para você aprender de forma simples e eficaz e usar a ferramenta ao máximo!
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <!-- How It Works Section: Simplifica o processo em passos claros -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-emerald-600 mb-8">Como Funciona O Mapa da Liberdade?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-emerald-700 mb-8">Sua Jornada para a Liberdade Financeira em 6 Passos Simples!</h2>
             <p class="text-xl text-slate-700 mb-10">
-                Sua jornada para a paz financeira, passo a passo, de forma clara e eficiente!
+                O Mapa da Liberdade foi desenhado para ser intuitivo e eficaz, transformando sua relação com o dinheiro em apenas alguns dias.
             </p>
 
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-slate-700">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 text-slate-700">
                 <div class="how-it-works-step">
-                    <i class="fas fa-search-dollar"></i> <!--  -->
-                    <h3 class="font-bold text-lg mb-2">Passo 1: Diagnóstico e Orçamento</h3>
-                    <p class="text-sm">Entenda para onde seu dinheiro vai e monte seu primeiro orçamento com a ferramenta.</p>
+                    <i class="fas fa-search-dollar"></i> 
+                    <h3 class="font-bold text-xl mb-2">1. Diagnóstico e Orçamento</h3>
+                    <p class="text-base">Descubra para onde seu dinheiro está indo e crie um orçamento inteligente com a ferramenta.</p>
                 </div>
                 <div class="how-it-works-step">
-                    <i class="fas fa-hand-holding-dollar"></i> <!--  -->
-                    <h3 class="font-bold text-lg mb-2">Passo 2: Ataque às Dívidas</h3>
-                    <p class="text-sm">Identifique suas dívidas e crie um plano estratégico para quitá-las de vez.</p>
+                    <i class="fas fa-hand-holding-dollar"></i> 
+                    <h3 class="font-bold text-xl mb-2">2. Ataque Estratégico às Dívidas</h3>
+                    <p class="text-base">Identifique suas dívidas e monte um plano para quitá-las de forma rápida e eficiente.</p>
                 </div>
                 <div class="how-it-works-step">
-                    <i class="fas fa-piggy-bank"></i> <!--  -->
-                    <h3 class="font-bold text-lg mb-2">Passo 3: Construa sua Reserva</h3>
-                    <p class="text-sm">Calcule e comece a formar sua reserva de emergência para ter segurança.</p>
-                </div>
-                <div class="how-it-works-step">
-                    <i class="fas fa-chart-line"></i> <!--  -->
-                    <h3 class="font-bold text-lg mb-2">Passo 4: Primeiros Investimentos</h3>
-                    <p class="text-sm">Descubra como seu dinheiro pode render e comece a investir com inteligência.</p>
+                    <i class="fas fa-piggy-bank"></i> 
+                    <h3 class="font-bold text-xl mb-2">3. Construa Sua Reserva de Emergência</h3>
+                    <p class="text-base">Calcule e comece a formar sua segurança financeira para imprevistos, dormindo tranquilo.</p>
                 </div>
                  <div class="how-it-works-step">
-                    <i class="fas fa-bullseye"></i> <!--  -->
-                    <h3 class="font-bold text-lg mb-2">Passo 5: Defina Suas Metas</h3>
-                    <p class="text-sm">Transforme seus sonhos em metas financeiras claras e alcançáveis.</p>
+                    <i class="fas fa-chart-line"></i> 
+                    <h3 class="font-bold text-xl mb-2">4. Seus Primeiros Investimentos</h3>
+                    <p class="text-base">Aprenda a fazer seu dinheiro render e comece a investir com inteligência, mesmo que seja iniciante.</p>
                 </div>
                 <div class="how-it-works-step">
-                    <i class="fas fa-sync-alt"></i> <!--  -->
-                    <h3 class="font-bold text-lg mb-2">Passo 6: Revisão e Aceleração</h3>
-                    <p class="text-sm">Dicas extras para manter o controle e acelerar sua jornada continuamente.</p>
+                    <i class="fas fa-bullseye"></i> 
+                    <h3 class="font-bold text-xl mb-2">5. Defina Suas Metas e Sonhos</h3>
+                    <p class="text-base">Transforme seus maiores desejos em metas financeiras claras e alcançáveis, com acompanhamento visual.</p>
+                </div>
+                <div class="how-it-works-step">
+                    <i class="fas fa-sync-alt"></i> 
+                    <h3 class="font-bold text-xl mb-2">6. Revisão e Aceleração Contínua</h3>
+                    <p class="text-base">Dicas e estratégias para manter o controle, otimizar seus resultados e acelerar sua jornada para a liberdade.</p>
                 </div>
             </div>
-            <p class="text-center text-xl text-slate-700 mt-10">
-                Cada passo é guiado pelo e-book e facilitado pela ferramenta interativa, tornando o processo simples e eficaz!
+            <p class="text-center text-xl text-slate-700 mt-12">
+                Cada passo é guiado pelo e-book e facilitado pela ferramenta interativa, tornando o processo simples, prático e eficaz!
             </p>
         </div>
     </section>
 
-    <!-- Dreams Section -->
-    <section class="py-16 bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <!-- Dreams Section: Conecta o controle financeiro com a realização de sonhos -->
+    <section class="py-16 bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-emerald-600 mb-8">Seus Sonhos Estão Mais Próximos do Que Você Imagina!</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-emerald-700 mb-8">Seus Maiores Sonhos Estão a Um Passo de Se Tornar Realidade!</h2>
             <p class="text-xl text-slate-700 mb-10">
-                O controle financeiro não é sobre cortar gastos, é sobre <strong>realizar!</strong> Veja como o <strong>O Mapa da Liberdade</strong> pode te ajudar a transformar seus maiores desejos em realidade:
+                O controle financeiro não é sobre cortar gastos, é sobre <strong>realizar!</strong> Veja como <strong>O Mapa da Liberdade</strong> pode te ajudar a transformar seus maiores desejos em realidade:
             </p>
 
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-slate-700">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-slate-700">
                 <div class="dream-card">
                     <img src="https://nekibr.github.io/pagina_vendas/images/sonho-filhos.jpg" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/300x150/E0F2F7/00796B?text=Filhos+Felizes'"
+                         onerror="this.onerror=null; this.src='https://placehold.co/350x180/E0F2F7/00796B?text=Filhos+Felizes'"
                          alt="Família feliz com filhos" class="mb-4 rounded-lg">
-                    <h3 class="font-bold text-lg mb-2">Dar o Melhor para Seus Filhos</h3>
-                    <p class="text-sm">Ofereça a educação, o lazer e a segurança que eles merecem, sem apertos.</p>
+                    <h3 class="font-bold text-xl mb-2">O Melhor para Seus Filhos</h3>
+                    <p class="text-base">Ofereça a educação, o lazer e a segurança que eles merecem, sem apertos financeiros.</p>
                 </div>
                 <div class="dream-card">
                     <img src="https://nekibr.github.io/pagina_vendas/images/sonho-viagem.jpg" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/300x150/FFF3E0/E65100?text=Viagem+dos+Sonhos'"
+                         onerror="this.onerror=null; this.src='https://placehold.co/350x180/FFF3E0/E65100?text=Viagem+dos+Sonhos'"
                          alt="Pessoa viajando para um destino paradisíaco" class="mb-4 rounded-lg">
-                    <h3 class="font-bold text-lg mb-2">A Viagem dos Seus Sonhos</h3>
-                    <p class="text-sm">Explore novos lugares, culturas e crie memórias inesquecíveis sem se endividar.</p>
+                    <h3 class="font-bold text-xl mb-2">A Viagem dos Seus Sonhos</h3>
+                    <p class="text-base">Explore novos lugares, culturas e crie memórias inesquecíveis sem se endividar.</p>
                 </div>
                 <div class="dream-card">
                     <img src="https://nekibr.github.io/pagina_vendas/images/sonho-carro.jpg" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/300x150/FCE4EC/AD1457?text=Carro+Novo'"
+                         onerror="this.onerror=null; this.src='https://placehold.co/350x180/FCE4EC/AD1457?text=Carro+Novo'"
                          alt="Pessoa ao lado de um carro novo" class="mb-4 rounded-lg">
-                    <h3 class="font-bold text-lg mb-2">Seu Carro Novo ou Melhor</h3>
-                    <p class="text-sm">Conquiste a mobilidade e o conforto que você e sua família merecem.</p>
+                    <h3 class="font-bold text-xl mb-2">Seu Carro Novo ou Melhor</h3>
+                    <p class="text-base">Conquiste a mobilidade, o conforto e a segurança que você e sua família merecem.</p>
                 </div>
                 <div class="dream-card">
                     <img src="https://nekibr.github.io/pagina_vendas/images/sonho-casa.jpg" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/300x150/E8F5E9/2E7D32?text=Casa+Propria'"
+                         onerror="this.onerror=null; this.src='https://placehold.co/350x180/E8F5E9/2E7D32?text=Casa+Propria'"
                          alt="Família feliz em frente à casa nova" class="mb-4 rounded-lg">
-                    <h3 class="font-bold text-lg mb-2">A Tão Sonhada Casa Própria</h3>
-                    <p class="text-sm">Construa seu lar, seu refúgio, seu patrimônio com segurança e planejamento.</p>
+                    <h3 class="font-bold text-xl mb-2">A Tão Sonhada Casa Própria</h3>
+                    <p class="text-base">Construa seu lar, seu refúgio, seu patrimônio com segurança e planejamento sólido.</p>
                 </div>
                 <div class="dream-card">
                     <img src="https://nekibr.github.io/pagina_vendas/images/sonho-aposentadoria.jpg" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/300x150/FFFDE7/FF6F00?text=Aposentadoria+Tranquila'"
+                         onerror="this.onerror=null; this.src='https://placehold.co/350x180/FFFDE7/FF6F00?text=Aposentadoria+Tranquila'"
                          alt="Casal idoso relaxando em um jardim" class="mb-4 rounded-lg">
-                    <h3 class="font-bold text-lg mb-2">Aposentadoria Tranquila</h3>
-                    <p class="text-sm">Viva seus anos dourados com conforto e sem preocupações financeiras.</p>
+                    <h3 class="font-bold text-xl mb-2">Aposentadoria Tranquila e Digna</h3>
+                    <p class="text-base">Viva seus anos dourados com conforto, segurança e sem preocupações financeiras.</p>
                 </div>
                 <div class="dream-card">
                     <img src="https://nekibr.github.io/pagina_vendas/images/sonho-negocio.jpg" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/300x150/F3E5F5/4A148C?text=Negocio+Proprio'"
+                         onerror="this.onerror=null; this.src='https://placehold.co/350x180/F3E5F5/4A148C?text=Negocio+Proprio'"
                          alt="Pessoa trabalhando em seu próprio negócio" class="mb-4 rounded-lg">
-                    <h3 class="font-bold text-lg mb-2">Seu Negócio Próprio</h3>
-                    <p class="text-sm">Transforme sua paixão em fonte de renda e realize sua independência profissional.</p>
+                    <h3 class="font-bold text-xl mb-2">Seu Negócio Próprio Próspero</h3>
+                    <p class="text-base">Transforme sua paixão em fonte de renda e realize sua independência profissional e financeira.</p>
                 </div>
             </div>
-            <p class="text-center text-xl text-slate-700 mt-10">
+            <p class="text-center text-xl text-slate-700 mt-12">
                 O <strong>O Mapa da Liberdade</strong> é o primeiro passo para você transformar esses sonhos em metas e, finalmente, em realidade!
             </p>
         </div>
     </section>
 
-    <!-- Why Choose This Product Section -->
-    <section class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <!-- Why Choose This Product Section: Reforça os diferenciais do produto -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-emerald-600 mb-8">Por Que Escolher O Mapa da Liberdade?</h2>
-            <ul class="list-none space-y-4 text-lg text-slate-700 font-medium">
+            <h2 class="text-3xl md:text-4xl font-bold text-emerald-700 mb-8">Por Que O Mapa da Liberdade é a Escolha Certa Para Você?</h2>
+            <ul class="list-none space-y-5 text-xl text-slate-700 font-medium">
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-blue-500 text-2xl">🚀</span>
-                    <span><strong>Aprenda e Aplique na Prática:</strong> Não apenas teoria! Nossa ferramenta interativa te permite aplicar o conhecimento na hora.</span>
+                    <span class="text-blue-500 text-3xl">🚀</span>
+                    <span><strong>Aprenda e Aplique na Prática:</strong> Não é só teoria! Nosso combo e-book + ferramenta te permite aplicar o conhecimento na hora e ver resultados.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-blue-500 text-2xl">⏰</span>
-                    <span><strong>Resultados Visíveis:</strong> Com foco e dedicação, você verá mudanças significativas na sua organização financeira rapidamente.</span>
+                    <span class="text-blue-500 text-3xl">⏰</span>
+                    <span><strong>Resultados Visíveis e Rápidos:</strong> Com foco e dedicação, você verá mudanças significativas na sua organização financeira em poucos dias.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-blue-500 text-2xl">💰</span>
-                    <span><strong>Simplicidade e Clareza:</strong> Conteúdo sem jargões, ideal para iniciantes, com passos claros e fáceis de seguir.</span>
+                    <span class="text-blue-500 text-3xl">💡</span>
+                    <span><strong>Simplicidade e Clareza Total:</strong> Conteúdo sem jargões, ideal para iniciantes, com passos claros e fáceis de seguir.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-blue-500 text-2xl">🔒</span>
-                    <span><strong>Acesso Flexível e SEUS DADOS SALVOS:</strong> E-book em PDF e ferramenta acessível direto do navegador (celular, tablet ou PC), com seus dados salvos automaticamente!</span>
+                    <span class="text-blue-500 text-3xl">🔒</span>
+                    <span><strong>Acesso Flexível e Seus Dados Seguros:</strong> E-book em PDF e ferramenta acessível direto do navegador (celular, tablet ou PC), com seus dados salvos automaticamente e com total privacidade!</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-blue-500 text-2xl">📈</span>
-                    <span><strong>Simuladores Poderosos:</strong> Projete investimentos e financiamentos para tomar decisões inteligentes sobre seu futuro.</span>
+                    <span class="text-blue-500 text-3xl">📈</span>
+                    <span><strong>Simuladores Poderosos:</strong> Projete investimentos e financiamentos para tomar decisões inteligentes e estratégicas sobre seu futuro.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-blue-500 text-2xl">💡</span>
-                    <span><strong>Visão 360° do Patrimônio:</strong> Acompanhe o crescimento da sua riqueza e tenha uma previsão do seu fluxo de caixa futuro.</span>
+                    <span class="text-blue-500 text-3xl">📊</span>
+                    <span><strong>Visão 360° do Patrimônio:</strong> Acompanhe o crescimento da sua riqueza e tenha uma previsão clara do seu fluxo de caixa futuro.</span>
                 </li>
                 <li class="flex items-center justify-center gap-3">
-                    <span class="text-blue-500 text-2xl">✅</span>
-                    <span><strong>Controle Total de Assinaturas:</strong> Gerencie seus serviços recorrentes e identifique oportunidades de economia.</span>
+                    <span class="text-blue-500 text-3xl">✅</span>
+                    <span><strong>Controle Total de Assinaturas:</strong> Gerencie seus serviços recorrentes e identifique oportunidades de economia imediata.</span>
                 </li>
             </ul>
         </div>
     </section>
 
-    <!-- About Author Section -->
-    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
-        <div class="container mx-auto text-center md:flex md:items-center md:text-left">
+    <!-- About Author Section: Constrói autoridade e confiança -->
+    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
+        <div class="container mx-auto text-center author-section-content">
             <div class="md:w-1/3 flex justify-center mb-6 md:mb-0 md:mr-8">
+                <!-- Foto do autor -->
                 <img src="https://nekibr.github.io/pagina_vendas/images/autor-perfil.jpg" 
-                     onerror="this.onerror=null; this.src='https://placehold.co/150x150/ADD8E6/00008B?text=Seu+Avatar'"
+                     onerror="this.onerror=null; this.src='https://placehold.co/200x200/ADD8E6/00008B?text=Seu+Avatar'"
                      alt="Foto de Leonardo Brandão, Economista e Especialista em Finanças" 
-                     class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-emerald-200">
+                     class="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-emerald-200">
             </div>
             <div class="md:w-2/3">
-                <h2 class="text-3xl font-bold text-emerald-600 mb-4">Quem Está Por Trás Deste Método?</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-emerald-700 mb-4">Quem Criou Este Caminho para a Liberdade Financeira?</h2>
                 <p class="text-lg text-slate-700 mb-4">
-                    Olá! Meu nome é <strong>Leonardo Brandão</strong>, sou Economista, especialista em finanças pessoais e comportamento financeiro. Minha paixão é entender por que as pessoas tomam decisões ruins com o próprio dinheiro, mesmo sabendo o que é certo.
+                    Olá! Meu nome é <strong>Leonardo Brandão</strong>, sou Economista, especialista em finanças pessoais e comportamento financeiro. Minha paixão é desvendar por que as pessoas tomam decisões financeiras que as afastam de seus objetivos, mesmo sabendo o que é melhor.
                 </p>
                 <p class="text-lg text-slate-700 mb-4">
-                    Com mais de 18 anos de carreira em bancos, fintechs e consultorias, percebi que o problema não era só falta de conhecimento, mas sim falta de método, clareza e controle. Foi assim que desenvolvi os pilares que hoje sustentam o <strong>"O Mapa da Liberdade"</strong>.
+                    Com mais de 18 anos de carreira em grandes bancos, fintechs e consultorias, percebi que o maior obstáculo não era a falta de conhecimento, mas sim a ausência de um método claro, de clareza e de controle. Foi assim que desenvolvi os pilares que hoje sustentam o <strong>"O Mapa da Liberdade"</strong>.
                 </p>
                 <p class="text-lg text-slate-700">
-                    Minha missão é democratizar o controle financeiro, tornando o planejamento acessível a qualquer pessoa, sem complicação, sem economês, e sem fórmulas mágicas. Como costumo dizer: "Liberdade financeira não é sobre ficar rico. É sobre dormir tranquilo no fim do mês."
+                    Minha missão é democratizar o controle financeiro, tornando o planejamento acessível a qualquer pessoa, sem complicação, sem "economês", e sem promessas vazias. Como costumo dizer: <strong>"Liberdade financeira não é sobre ficar rico. É sobre dormir tranquilo no fim do mês."</strong>
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial Section -->
-    <section class="py-16 bg-gray-50 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <!-- Testimonial Section: Prova social para construir confiança -->
+    <section class="py-16 bg-gray-50 rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-emerald-600 mb-8">O Que Nossos Clientes Dizem</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-emerald-700 mb-10">Histórias Reais de Transformação: O Que Nossos Clientes Dizem</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <img src="https://nekibr.github.io/pagina_vendas/images/ana-p-avatar.jpg" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/50x50/FCA5A5/7F1D1D?text=AP'"
-                             alt="Avatar de Ana P." class="testimonial-avatar mr-4">
-                        <p class="font-semibold text-emerald-700">- Ana P., 32 anos</p>
-                    </div>
-                    <p class="italic text-slate-700">"Eu estava perdida com minhas contas e o salário sumia. Com este e-book e a ferramenta, consegui organizar tudo em uma semana. É impressionante como algo tão simples pode mudar tanto e trazer tanta paz!"</p>
+                    <img src="https://nekibr.github.io/pagina_vendas/images/ana-p-avatar.jpg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/64x64/FCA5A5/7F1D1D?text=AP'"
+                             alt="Avatar de Ana P." class="testimonial-avatar">
+                    <p class="font-semibold text-emerald-800 text-lg mb-2">Ana P., 32 anos</p>
+                    <p class="italic text-slate-700 text-base">"Eu estava completamente perdida com minhas contas e o salário parecia evaporar. Com este e-book e a ferramenta, consegui organizar tudo em menos de uma semana. É impressionante como algo tão simples pode mudar tanto e trazer tanta paz!"</p>
                 </div>
                 <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <img src="https://nekibr.github.io/pagina_vendas/images/bruno-m-avatar.jpg" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/50x50/BFDBFE/1E40AF?text=BM'"
-                             alt="Avatar de Bruno M." class="testimonial-avatar mr-4">
-                        <p class="font-semibold text-emerald-700">- Bruno M., 28 anos</p>
-                    </div>
-                    <p class="italic text-slate-700">"Sempre tive medo de investir e achava que não era para mim. O e-book me deu a base e a ferramenta me ajudou a visualizar meu orçamento para finalmente começar a poupar. Recomendo para todos que querem dar o primeiro passo e realizar sonhos!"</p>
+                    <img src="https://nekibr.github.io/pagina_vendas/images/bruno-m-avatar.jpg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/64x64/BFDBFE/1E40AF?text=BM'"
+                             alt="Avatar de Bruno M." class="testimonial-avatar">
+                    <p class="font-semibold text-emerald-800 text-lg mb-2">Bruno M., 28 anos</p>
+                    <p class="italic text-slate-700 text-base">"Sempre tive medo de investir e achava que não era para mim. O e-book me deu a base e a ferramenta me ajudou a visualizar meu orçamento para finalmente começar a poupar. Recomendo para todos que querem dar o primeiro passo e realizar sonhos!"</p>
                  </div>
                  <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <img src="https://nekibr.github.io/pagina_vendas/images/carla-g-avatar.jpg" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/50x50/FDBA74/7C2D12?text=CG'"
-                             alt="Avatar de Carla G." class="testimonial-avatar mr-4">
-                        <p class="font-semibold text-emerald-700">- Carla G., 40 anos</p>
-                    </div>
-                    <p class="italic text-slate-700">"Minhas dívidas eram uma bola de neve. Segui as dicas e usei a ferramenta para organizar tudo. Em pouco tempo, já vi resultados e estou no caminho certo para a liberdade. Obrigada!"</p>
+                    <img src="https://nekibr.github.io/pagina_vendas/images/carla-g-avatar.jpg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/64x64/FDBA74/7C2D12?text=CG'"
+                             alt="Avatar de Carla G." class="testimonial-avatar">
+                    <p class="font-semibold text-emerald-800 text-lg mb-2">Carla G., 40 anos</p>
+                    <p class="italic text-slate-700 text-base">"Minhas dívidas eram uma bola de neve que só crescia. Segui as dicas do e-book e usei a ferramenta para organizar tudo. Em pouco tempo, já vi resultados concretos e estou no caminho certo para a liberdade. Obrigada!"</p>
                 </div>
                 <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <img src="https://nekibr.github.io/pagina_vendas/images/rafael-s-avatar.jpg" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/50x50/D1FAE5/065F46?text=RS'"
-                             alt="Avatar de Rafael S." class="testimonial-avatar mr-4">
-                        <p class="font-semibold text-emerald-700">- Rafael S., 25 anos</p>
-                    </div>
-                    <p class="italic text-slate-700">"Nunca pensei que entender de dinheiro pudesse ser tão fácil. O conteúdo é claro, a ferramenta é viciante de tão útil. Valeu cada centavo investido!"</p>
+                    <img src="https://nekibr.github.io/pagina_vendas/images/rafael-s-avatar.jpg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/64x64/D1FAE5/065F46?text=RS'"
+                             alt="Avatar de Rafael S." class="testimonial-avatar">
+                    <p class="font-semibold text-emerald-800 text-lg mb-2">Rafael S., 25 anos</p>
+                    <p class="italic text-slate-700 text-base">"Nunca pensei que entender de dinheiro pudesse ser tão fácil e até divertido. O conteúdo é super claro, e a ferramenta é viciante de tão útil. Valeu cada centavo investido, minha vida financeira mudou!"</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing and Final CTA -->
-    <section id="comprar" class="py-16 bg-gradient-to-br from-emerald-100 to-blue-100 rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6 text-center">
+    <!-- Pricing and Final CTA: Oportunidade de compra com senso de urgência e garantia -->
+    <section id="comprar" class="py-16 bg-gradient-to-br from-emerald-100 to-blue-100 rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6 text-center">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-emerald-800 mb-6">Comece sua Jornada para a Paz Financeira Agora!</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-emerald-800 mb-6">Comece Sua Jornada para a Paz Financeira AGORA!</h2>
             <p class="text-xl text-slate-700 mb-4">
-                Você não está pagando por um e-book ou uma ferramenta. Você está investindo na sua <strong>paz de espírito</strong>, no seu <strong>controle financeiro</strong> e na <strong>realização dos seus sonhos</strong>!
+                Você não está apenas comprando um e-book ou uma ferramenta. Você está fazendo um <strong>investimento transformador</strong> na sua <strong>paz de espírito</strong>, no seu <strong>controle financeiro</strong> e na <strong>realização dos seus sonhos mais profundos</strong>!
             </p>
             <p class="text-4xl md:text-5xl font-extrabold text-emerald-600 mb-4">
                 De <span class="text-red-500 line-through">R$ 199,90</span> por apenas
@@ -526,57 +570,56 @@
             <p class="text-6xl md:text-7xl font-extrabold text-emerald-800 mb-8">
                 R$ 49,90
             </p>
-            <p class="text-lg text-slate-700 mb-8">
+            <p class="text-lg text-slate-700 mb-8 max-w-2xl mx-auto">
                 Este é o valor de uma pizza, de um jantar fora, ou de alguns cafés. Mas, em vez de um prazer momentâneo, você terá acesso imediato ao e-book completo e à ferramenta interativa que podem transformar sua vida financeira para sempre!
             </p>
             <p class="text-lg text-red-700 font-bold mb-8">
-                <i class="fas fa-exclamation-triangle mr-2"></i> PREÇO DE LANÇAMENTO! Após o período promocional, o valor voltará para R$ 199,90. Não perca esta oportunidade!
+                <i class="fas fa-exclamation-triangle mr-2"></i> ATENÇÃO: PREÇO DE LANÇAMENTO POR TEMPO LIMITADO! Após o período promocional, o valor voltará para R$ 199,90. Não perca esta oportunidade única!
             </p>
 
             <a href="https://pay.hotmart.com/X100801960I?off=h6p12a0s" target="_blank" class="btn-primary">
-                Comprar Agora e Conquistar Minha Paz Financeira!
+                QUERO MINHA LIBERDADE FINANCEIRA AGORA!
             </a>
 
-          </div>
-            </div>
-            <p class="mt-4 text-sm text-slate-600">Pagamento seguro via Hotmart.</p>
-             <p class="text-sm text-slate-600 mt-2">
-                <strong>GARANTIA INCONDICIONAL DE 7 DIAS:</strong> Sua satisfação ou seu dinheiro de volta!
+            <p class="mt-6 text-sm text-slate-600">Pagamento 100% seguro via Hotmart.</p>
+            <p class="text-sm text-slate-600 mt-2 font-bold">
+                GARANTIA INCONDICIONAL DE 7 DIAS: Sua satisfação ou seu dinheiro de volta!
             </p>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-4xl px-6">
+    <!-- FAQ Section: Responde às dúvidas mais comuns -->
+    <section class="py-16 bg-white rounded-xl shadow-lg my-12 mx-auto max-w-5xl px-6">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-emerald-600 mb-8">Perguntas Frequentes</h2>
-            <div class="space-y-6 text-slate-700">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-emerald-700 mb-8">Perguntas Frequentes (FAQ)</h2>
+            <div class="space-y-8 text-slate-700">
                 <div>
-                    <h3 class="font-bold text-xl mb-2">O que é o "O Mapa da Liberdade"?</h3>
-                    <p>É um produto digital que combina um e-book completo com um guia prático para organização financeira e uma ferramenta interativa que te ajuda a aplicar os conceitos de forma visual e dinâmica.</p>
+                    <h3 class="font-bold text-xl md:text-2xl mb-2">O que é o "O Mapa da Liberdade"?</h3>
+                    <p class="text-lg">É um produto digital completo que combina um e-book detalhado com um guia prático para organização financeira e uma ferramenta interativa exclusiva ("Finanças em Ação") que te ajuda a aplicar os conceitos de forma visual e dinâmica, transformando a teoria em prática.</p>
                 </div>
                 <div>
-                    <h3 class="font-bold text-xl mb-2">Como acesso a ferramenta interativa?</h3>
-                    <p>Após a compra, você receberá acesso ao e-book e, dentro dele, um link direto para a ferramenta interativa. Ela funciona em qualquer navegador (celular, tablet ou computador), sem necessidade de instalação.</p>
+                    <h3 class="font-bold text-xl md:text-2xl mb-2">Como acesso a ferramenta interativa?</h3>
+                    <p class="text-lg">Após a confirmação da compra, você receberá acesso imediato ao e-book em PDF. Dentro do e-book, haverá um link direto para a ferramenta interativa. Ela funciona em qualquer navegador de internet (seja no seu celular, tablet ou computador), sem a necessidade de baixar ou instalar nada.</p>
                 </div>
                 <div>
-                    <h3 class="font-bold text-xl mb-2">Preciso ter conhecimento prévio em finanças?</h3>
-                    <p>Não! Este produto foi desenvolvido especialmente para iniciantes. A linguagem é simples e os passos são fáceis de seguir, tanto no e-book quanto na ferramenta.</p>
+                    <h3 class="font-bold text-xl md:text-2xl mb-2">Preciso ter conhecimento prévio em finanças para usar?</h3>
+                    <p class="text-lg">Absolutamente não! Este produto foi desenvolvido pensando justamente em quem está começando do zero ou se sente perdido(a) com as finanças. A linguagem é simples, clara e os passos são extremamente fáceis de seguir, tanto no e-book quanto na ferramenta, sem jargões complicados.</p>
                 </div>
                 <div>
-                    <h3 class="font-bold text-xl mb-2">Meus dados na ferramenta são salvos?</h3>
-                    <p>Sim! A ferramenta salva automaticamente os dados que você insere (salário, despesas, dívidas, metas) diretamente no seu navegador, para que você possa continuar de onde parou mesmo se fechar a página. Isso é feito de forma segura e privada, no seu próprio dispositivo.</p>
+                    <h3 class="font-bold text-xl md:text-2xl mb-2">Meus dados na ferramenta são salvos de forma segura?</h3>
+                    <p class="text-lg">Sim! A ferramenta salva automaticamente os dados que você insere (como salário, despesas, dívidas, metas) diretamente no seu navegador, utilizando a tecnologia de armazenamento local. Isso significa que seus dados ficam seguros e privados no seu próprio dispositivo, permitindo que você continue de onde parou mesmo se fechar a página. Não armazenamos seus dados em nossos servidores.</p>
                 </div>
                 <div>
-                    <h3 class="font-bold text-xl mb-2">Existe garantia?</h3>
-                    <p>Sim! Você tem 7 dias para testar o produto. Se por qualquer motivo não ficar satisfeito(a), basta solicitar o reembolso integral do valor da compra.</p>
+                    <h3 class="font-bold text-xl md:text-2xl mb-2">Existe alguma garantia de satisfação?</h3>
+                    <p class="text-lg">Sim, com certeza! Temos total confiança na eficácia do "O Mapa da Liberdade". Por isso, você tem uma <strong>garantia incondicional de 7 dias</strong>. Se por qualquer motivo você não ficar 100% satisfeito(a) com o produto, basta solicitar o reembolso integral do valor da sua compra, sem burocracia.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer: Informações de direitos autorais -->
     <footer class="text-center mt-12 mb-4 text-sm text-slate-500">
-        <p>© Equipe Neozz. Todos os direitos reservados.</p>
+        <p>© Equipe Neozz. Todos os direitos reservados. | <a href="#" class="text-blue-500 hover:underline">Política de Privacidade</a> | <a href="#" class="text-blue-500 hover:underline">Termos de Uso</a></p>
     </footer>
 
 </body>
