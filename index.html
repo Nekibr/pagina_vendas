@@ -35,15 +35,16 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             flex-direction: column;
         }
         
+        /* Estilos para o botão principal, agora com adaptação para largura total em mobile */
         .btn-primary {
             display: inline-block;
-            padding: 1.5rem 4rem;
+            padding: 1.5rem 4rem; /* Padding generoso para facilitar o toque */
             background: linear-gradient(135deg, #DC2626, #EF4444);
             color: white;
             text-decoration: none;
             border-radius: 1rem;
             font-weight: 900;
-            font-size: 1.75rem;
+            font-size: 1.75rem; /* Tamanho de fonte grande para destaque */
             box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
             transition: all 0.3s ease;
             text-transform: uppercase;
@@ -51,8 +52,17 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             border: 3px solid #FEF2F2;
             position: relative;
             overflow: hidden;
+            width: 100%; /* Ocupa a largura total em mobile por padrão */
+            max-width: 400px; /* Limita a largura máxima em telas maiores */
         }
         
+        /* Adaptação para telas maiores (desktop) */
+        @media (min-width: 768px) { /* md breakpoint do Tailwind */
+            .btn-primary {
+                width: auto; /* Volta para largura automática em telas maiores */
+            }
+        }
+
         .btn-primary::before {
             content: '';
             position: absolute;
@@ -168,11 +178,11 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
 </head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBG5347T89"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-ZBG5347T89');
+    gtag('config', 'G-ZBG5347T89');
 </script>
 
 <body class="bg-gray-50 text-gray-800 leading-relaxed">
@@ -199,12 +209,24 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             
             <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-4xl mx-auto mb-12">
                 <h3 class="text-3xl font-bold text-red-600 mb-6">Esta é a SUA ÚLTIMA CHANCE de mudar de vida!</h3>
-                <img src="https://nekibr.github.io/pagina_vendas/images/capa-e-ferramenta.jpg" 
-                     onerror="this.onerror=null; this.src='https://placehold.co/700x450/D1FAE5/065F46?text=O+Mapa+da+Liberdade'"
-                     alt="O Mapa da Liberdade - Sua Salvação Financeira" 
-                     class="rounded-xl shadow-lg w-full max-w-2xl h-auto object-cover mx-auto mb-6">
-                
-                <a href="#comprar" class="btn-primary">
+                <!-- Vídeo Wistia responsivo -->
+                <div class="wistia_embed_container relative pb-[56.25%] mb-6">
+                    <div class="wistia_player_container absolute top-0 left-0 w-full h-full">
+                        <script src="https://fast.wistia.com/player.js" async></script>
+                        <script src="https://fast.wistia.com/embed/aihzbk9net.js" async type="module"></script>
+                        <style>
+                            wistia-player[media-id='aihzbk9net']:not(:defined) { 
+                                background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/aihzbk9net/swatch'); 
+                                display: block; 
+                                filter: blur(5px); 
+                                padding-top:56.46%; 
+                            }
+                        </style> 
+                        <wistia-player media-id="aihzbk9net" aspect="1.7712177121771218"></wistia-player>
+                    </div>
+                </div>
+
+                <a href="#comprar" class="btn-primary mx-auto">
                     🔥 QUERO SAIR DAS DÍVIDAS AGORA! 🔥
                 </a>
                 <p class="text-sm text-gray-600 mt-4">⚡ Acesso imediato após o pagamento</p>
@@ -222,6 +244,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                 Se você se identifica com pelo menos 3 dessas situações, <strong>PRECISA AGIR AGORA!</strong>
             </p>
             
+            <!-- Grid que vira coluna em mobile -->
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="pain-card">
                     <div class="flex items-start gap-4">
@@ -291,7 +314,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                 <p class="text-xl text-gray-700 mb-8">
                     O sistema financeiro foi feito para te manter endividado. Mas existe uma SAÍDA comprovada!
                 </p>
-                <a href="#comprar" class="btn-primary">
+                <a href="#comprar" class="btn-primary mx-auto">
                     🆘 QUERO A SOLUÇÃO AGORA! 🆘
                 </a>
             </div>
@@ -308,11 +331,12 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                 Mais de <strong>50.000 pessoas</strong> já transformaram suas vidas com O Mapa da Liberdade
             </p>
             
+            <!-- Grid de depoimentos que vira coluna em mobile -->
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="testimonial-card">
                     <div class="flex items-center mb-4">
                         <img src="https://nekibr.github.io/pagina_vendas/images/carla-g-avatar.jpg" 
-                             alt="Maria Silva" class="w-16 h-16 rounded-full mr-4">
+                                alt="Maria Silva" class="w-16 h-16 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">Maria Silva</h4>
                             <p class="text-sm text-gray-600">Professora, São Paulo</p>
@@ -328,7 +352,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                 <div class="testimonial-card">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face" 
-                             alt="João Santos" class="w-16 h-16 rounded-full mr-4">
+                                alt="João Santos" class="w-16 h-16 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">João Santos</h4>
                             <p class="text-sm text-gray-600">Vendedor, Rio de Janeiro</p>
@@ -344,7 +368,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                 <div class="testimonial-card">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face" 
-                             alt="Ana Costa" class="w-16 h-16 rounded-full mr-4">
+                                alt="Ana Costa" class="w-16 h-16 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">Ana Costa</h4>
                             <p class="text-sm text-gray-600">Enfermeira, Belo Horizonte</p>
@@ -372,6 +396,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                     O Mapa da Liberdade: Seu Guia Completo para a Liberdade Financeira
                 </h3>
                 
+                <!-- Grid de soluções que vira coluna em mobile -->
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="solution-card">
                         <h4 class="text-2xl font-bold text-green-700 mb-4">📚 E-book Completo (60 páginas)</h4>
@@ -420,7 +445,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             </div>
             
             <div class="text-center">
-                <a href="#comprar" class="btn-primary">
+                <a href="#comprar" class="btn-primary mx-auto">
                     💰 QUERO TRANSFORMAR MINHA VIDA! 💰
                 </a>
             </div>
@@ -451,7 +476,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                     🛡️ GARANTIA DE 30 DIAS - 100% DO SEU DINHEIRO DE VOLTA
                 </div>
                 
-                <a href="#comprar" class="btn-primary">
+                <a href="#comprar" class="btn-primary mx-auto">
                     🔥 GARANTIR MINHA VAGA AGORA! 🔥
                 </a>
                 
@@ -501,7 +526,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                 </ul>
             </div>
             
-            <a href="https://pay.hotmart.com/T101073829N?off=v3xu6yde" class="btn-primary" style="background: linear-gradient(135deg, #059669, #10B981); font-size: 2rem; padding: 2rem 5rem;">
+            <a href="https://pay.hotmart.com/T101073829N?off=v3xu6yde" class="btn-primary mx-auto" style="background: linear-gradient(135deg, #059669, #10B981); font-size: 2rem; padding: 2rem 5rem;">
                 🚀 COMPRAR AGORA POR R$ 37,00 🚀
             </a>
             
@@ -556,4 +581,3 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
     </script>
 </body>
 </html>
-
