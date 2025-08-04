@@ -11,39 +11,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '400018369130904');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '400018369130904');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <!-- utmify-->
-   <script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  async
-  defer
-></script>
+    <script
+        src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+        data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids
+        async
+        defer
+    ></script>
     <!-- End utmify -->
-        </style>
-        body { 
-            font-family: 'Inter', sans-serif; 
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
-        
+
         /* Estilos para o botão principal, agora com adaptação para largura total em mobile */
         .btn-primary {
             display: inline-block;
@@ -64,7 +64,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             width: 100%; /* Ocupa a largura total em mobile por padrão */
             max-width: 400px; /* Limita a largura máxima em telas maiores */
         }
-        
+
         /* Adaptação para telas maiores (desktop) */
         @media (min-width: 768px) { /* md breakpoint do Tailwind */
             .btn-primary {
@@ -82,23 +82,23 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
             transition: left 0.5s;
         }
-        
+
         .btn-primary:hover::before {
             left: 100%;
         }
-        
+
         .btn-primary:hover {
             background: linear-gradient(135deg, #B91C1C, #DC2626);
             transform: translateY(-4px);
             box-shadow: 0 12px 30px rgba(220, 38, 38, 0.6);
         }
-        
+
         .text-gradient {
             background: linear-gradient(135deg, #DC2626, #EF4444, #F97316);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .pain-card {
             background: linear-gradient(135deg, #FEF2F2, #FECACA);
             padding: 2rem;
@@ -107,11 +107,11 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             border: 2px solid #FCA5A5;
             transition: transform 0.3s ease;
         }
-        
+
         .pain-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .solution-card {
             background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
             padding: 2rem;
@@ -120,11 +120,11 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             border: 2px solid #A7F3D0;
             transition: transform 0.3s ease;
         }
-        
+
         .solution-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .urgency-banner {
             background: linear-gradient(135deg, #DC2626, #B91C1C);
             color: white;
@@ -133,12 +133,12 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             font-weight: bold;
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.8; }
         }
-        
+
         .testimonial-card {
             background: white;
             padding: 2rem;
@@ -147,12 +147,12 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             border: 2px solid #E5E7EB;
             transition: transform 0.3s ease;
         }
-        
+
         .testimonial-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
-        
+
         .countdown {
             background: linear-gradient(135deg, #DC2626, #B91C1C);
             color: white;
@@ -161,19 +161,19 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             text-align: center;
             margin: 2rem 0;
         }
-        
+
         .price-strike {
             text-decoration: line-through;
             color: #6B7280;
             font-size: 1.5rem;
         }
-        
+
         .price-current {
             color: #DC2626;
             font-size: 3rem;
             font-weight: 900;
         }
-        
+
         .guarantee-badge {
             background: linear-gradient(135deg, #10B981, #059669);
             color: white;
@@ -185,16 +185,15 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
         }
     </style>
 </head>
+<body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBG5347T89"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-ZBG5347T89');
-</script>
-
-<body class="bg-gray-50 text-gray-800 leading-relaxed">
+        gtag('config', 'G-ZBG5347T89');
+    </script>
 
     <!-- Urgency Banner -->
     <div class="urgency-banner">
@@ -212,10 +211,10 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                 <span class="text-red-600">Mais de 50.000 Brasileiros</span> das Dívidas
             </h2>
             <p class="text-xl md:text-2xl text-gray-700 mb-12 max-w-4xl mx-auto font-medium">
-                Se você está <strong>cansado de viver no vermelho</strong>, com o coração apertado toda vez que olha a conta bancária, 
+                Se você está <strong>cansado de viver no vermelho</strong>, com o coração apertado toda vez que olha a conta bancária,
                 e <strong>desesperado para encontrar uma saída</strong> das dívidas que não param de crescer...
             </p>
-            
+
             <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-4xl mx-auto mb-12">
                 <h3 class="text-3xl font-bold text-red-600 mb-6">Esta é a SUA ÚLTIMA CHANCE de mudar de vida!</h3>
                 <!-- Vídeo Wistia responsivo -->
@@ -224,13 +223,13 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                         <script src="https://fast.wistia.com/player.js" async></script>
                         <script src="https://fast.wistia.com/embed/aihzbk9net.js" async type="module"></script>
                         <style>
-                            wistia-player[media-id='aihzbk9net']:not(:defined) { 
-                                background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/aihzbk9net/swatch'); 
-                                display: block; 
-                                filter: blur(5px); 
-                                padding-top:56.46%; 
+                            wistia-player[media-id='aihzbk9net']:not(:defined) {
+                                background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/aihzbk9net/swatch');
+                                display: block;
+                                filter: blur(5px);
+                                padding-top:56.46%;
                             }
-                        </style> 
+                        </style>
                         <wistia-player media-id="aihzbk9net" aspect="1.7712177121771218"></wistia-player>
                     </div>
                 </div>
@@ -252,7 +251,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             <p class="text-xl text-center text-gray-700 mb-12 font-medium">
                 Se você se identifica com pelo menos 3 dessas situações, <strong>PRECISA AGIR AGORA!</strong>
             </p>
-            
+
             <!-- Grid que vira coluna em mobile -->
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="pain-card">
@@ -264,7 +263,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="pain-card">
                     <div class="flex items-start gap-4">
                         <span class="text-red-500 text-4xl">💸</span>
@@ -274,7 +273,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="pain-card">
                     <div class="flex items-start gap-4">
                         <span class="text-red-500 text-4xl">📱</span>
@@ -284,7 +283,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="pain-card">
                     <div class="flex items-start gap-4">
                         <span class="text-red-500 text-4xl">😔</span>
@@ -294,7 +293,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="pain-card">
                     <div class="flex items-start gap-4">
                         <span class="text-red-500 text-4xl">⚡</span>
@@ -304,7 +303,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="pain-card">
                     <div class="flex items-start gap-4">
                         <span class="text-red-500 text-4xl">💔</span>
@@ -315,7 +314,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
                 <h3 class="text-3xl font-bold text-red-600 mb-6">
                     Se você se identificou, saiba que NÃO É SUA CULPA!
@@ -339,12 +338,12 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             <p class="text-xl text-center text-gray-700 mb-12">
                 Mais de <strong>50.000 pessoas</strong> já transformaram suas vidas com O Mapa da Liberdade
             </p>
-            
+
             <!-- Grid de depoimentos que vira coluna em mobile -->
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="testimonial-card">
                     <div class="flex items-center mb-4">
-                        <img src="https://nekibr.github.io/pagina_vendas/images/carla-g-avatar.jpg" 
+                        <img src="https://nekibr.github.io/pagina_vendas/images/carla-g-avatar.jpg"
                                 alt="Maria Silva" class="w-16 h-16 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">Maria Silva</h4>
@@ -352,15 +351,15 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                         </div>
                     </div>
                     <p class="text-gray-700 italic mb-4">
-                        "Estava com R$ 15.000 em dívidas e achava que nunca ia conseguir sair. Em 8 meses seguindo o método, 
+                        "Estava com R$ 15.000 em dívidas e achava que nunca ia conseguir sair. Em 8 meses seguindo o método,
                         quitei tudo e ainda consegui fazer uma reserva de emergência!"
                     </p>
                     <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
                 </div>
-                
+
                 <div class="testimonial-card">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face" 
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face"
                                 alt="João Santos" class="w-16 h-16 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">João Santos</h4>
@@ -368,15 +367,15 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                         </div>
                     </div>
                     <p class="text-gray-700 italic mb-4">
-                        "Minha vida era um caos financeiro. Hoje tenho controle total do meu dinheiro e já estou investindo. 
+                        "Minha vida era um caos financeiro. Hoje tenho controle total do meu dinheiro e já estou investindo.
                         O método é simples e realmente funciona!"
                     </p>
                     <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
                 </div>
-                
+
                 <div class="testimonial-card">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face" 
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face"
                                 alt="Ana Costa" class="w-16 h-16 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">Ana Costa</h4>
@@ -384,7 +383,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                         </div>
                     </div>
                     <p class="text-gray-700 italic mb-4">
-                        "Consegui quitar meu cartão de crédito que estava me matando de juros. Agora durmo tranquila e 
+                        "Consegui quitar meu cartão de crédito que estava me matando de juros. Agora durmo tranquila e
                         já estou planejando minha casa própria!"
                     </p>
                     <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
@@ -399,12 +398,12 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             <h2 class="text-4xl md:text-5xl font-black text-center text-green-600 mb-8">
                 A SOLUÇÃO QUE VAI MUDAR SUA VIDA!
             </h2>
-            
+
             <div class="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl shadow-2xl mb-12">
                 <h3 class="text-3xl font-bold text-center text-green-700 mb-8">
                     O Mapa da Liberdade: Seu Guia Completo para a Liberdade Financeira
                 </h3>
-                
+
                 <!-- Grid de soluções que vira coluna em mobile -->
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="solution-card">
@@ -428,7 +427,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div class="solution-card">
                         <h4 class="text-2xl font-bold text-green-700 mb-4">🛠️ Ferramenta Interativa</h4>
                         <ul class="space-y-3 text-gray-700">
@@ -452,7 +451,7 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center">
                 <a href="#comprar" class="btn-primary mx-auto">
                     💰 QUERO TRANSFORMAR MINHA VIDA! 💰
@@ -467,28 +466,28 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             <h2 class="text-4xl md:text-5xl font-black text-red-600 mb-8">
                 ⚠️ ATENÇÃO: OFERTA LIMITADA! ⚠️
             </h2>
-            
+
             <div class="countdown mb-8">
                 <h3 class="text-2xl font-bold mb-4">Esta oferta expira em:</h3>
                 <div class="text-4xl font-black" id="countdown">23:59:47</div>
                 <p class="mt-4">Depois disso, o preço volta ao normal!</p>
             </div>
-            
+
             <div class="bg-white p-8 rounded-2xl shadow-2xl">
                 <h3 class="text-3xl font-bold text-gray-800 mb-4">Valor Normal:</h3>
                 <p class="price-strike mb-4">R$ 97,00</p>
-                
+
                 <h3 class="text-3xl font-bold text-red-600 mb-4">HOJE APENAS:</h3>
                 <p class="price-current mb-6">R$ 37,00</p>
-                
+
                 <div class="guarantee-badge mb-6">
                     🛡️ GARANTIA DE 30 DIAS - 100% DO SEU DINHEIRO DE VOLTA
                 </div>
-                
+
                 <a href="#comprar" class="btn-primary mx-auto">
                     🔥 GARANTIR MINHA VAGA AGORA! 🔥
                 </a>
-                
+
                 <p class="text-sm text-gray-600 mt-4">
                     ⚡ Últimas 47 vagas disponíveis<br>
                     💳 Parcelamento em até 12x sem juros
@@ -503,12 +502,12 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             <h2 class="text-4xl md:text-6xl font-black mb-8">
                 SUA NOVA VIDA COMEÇA AGORA!
             </h2>
-            
+
             <p class="text-xl md:text-2xl mb-12">
                 Não deixe mais um dia passar vivendo essa angústia financeira.<br>
                 <strong>Sua família merece sua tranquilidade. Você merece ser feliz!</strong>
             </p>
-            
+
             <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl mb-8">
                 <h3 class="text-3xl font-bold text-red-600 mb-6">O que você recebe HOJE:</h3>
                 <ul class="text-left space-y-4 text-lg max-w-2xl mx-auto">
@@ -534,11 +533,11 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
                     </li>
                 </ul>
             </div>
-            
+
             <a href="https://pay.hotmart.com/T101073829N?off=v3xu6yde" class="btn-primary mx-auto" style="background: linear-gradient(135deg, #059669, #10B981); font-size: 2rem; padding: 2rem 5rem;">
                 🚀 COMPRAR AGORA POR R$ 37,00 🚀
             </a>
-            
+
             <p class="text-lg mt-6">
                 💳 Parcelamento em até 12x de R$ 3,08<br>
                 🔒 Pagamento 100% seguro via Hotmart
@@ -564,20 +563,20 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
             tomorrow.setDate(tomorrow.getDate() + 1);
             tomorrow.setHours(0, 0, 0, 0);
             const distance = tomorrow - now;
-            
+
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById("countdown").innerHTML = 
-                String(hours).padStart(2, '0') + ":" + 
-                String(minutes).padStart(2, '0') + ":" + 
+
+            document.getElementById("countdown").innerHTML =
+                String(hours).padStart(2, '0') + ":" +
+                String(minutes).padStart(2, '0') + ":" +
                 String(seconds).padStart(2, '0');
         }
-        
+
         setInterval(updateCountdown, 1000);
         updateCountdown();
-        
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -590,4 +589,3 @@ src="https://www.facebook.com/tr?id=400018369130904&ev=PageView&noscript=1"
     </script>
 </body>
 </html>
-
